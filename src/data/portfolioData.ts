@@ -97,10 +97,11 @@ export const skillCategories: SkillCategory[] = [
     description: 'Core languages for algorithm formulation, data pipelines, and backend logic.',
     skills: [
       { name: 'Python (NumPy, SciPy, OOP)', level: 'Advanced', isKeySkill: true },
+      { name: 'R Programming', level: 'Proficient', isKeySkill: true },
       { name: 'JavaScript (ES6+)', level: 'Proficient', isKeySkill: true },
       { name: 'HTML5 & CSS3', level: 'Advanced', isKeySkill: true },
       { name: 'Java (Core / OOP)', level: 'Proficient', isKeySkill: true },
-      { name: 'C', level: 'Proficient' },
+      { name: 'C / C++', level: 'Proficient' },
       { name: 'C#', level: 'Proficient' },
       { name: 'SQL (Complex Joins, Aggregations)', level: 'Advanced', isKeySkill: true },
       { name: 'Dart / Flutter Framework', level: 'Proficient', isKeySkill: true },

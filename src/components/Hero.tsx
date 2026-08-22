@@ -131,7 +131,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   <span>LANGUAGES</span>
                 </div>
                 <div className="sm:col-span-8 text-zinc-200 dark:text-zinc-200">
-                  Python • JavaScript • HTML/CSS • Java • C • C# • SQL • Dart
+                  Python • R • JavaScript • HTML/CSS • Java • C • C++ • C# • SQL • Dart
                 </div>
               </div>
 

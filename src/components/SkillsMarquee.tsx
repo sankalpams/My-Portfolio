@@ -18,17 +18,17 @@ export const SkillsMarquee: React.FC = () => {
 
   const row2 = [
     { name: 'Python', icon: '🐍' },
+    { name: 'R', icon: '📊' },
     { name: 'JavaScript (JS)', icon: '💛' },
     { name: 'HTML5', icon: '🌐' },
     { name: 'CSS3', icon: '🎨' },
     { name: 'Java', icon: '☕' },
-    { name: 'C', icon: '🔷' },
+    { name: 'C / C++', icon: '🔷' },
     { name: 'C#', icon: '🟣' },
     { name: 'Dart', icon: '🎯' },
     { name: 'SQL & Querying', icon: '💾' },
     { name: 'FastAPI', icon: '⚡' },
     { name: 'Streamlit', icon: '🎈' },
-    { name: 'REST APIs', icon: '🔌' },
   ];
 
   const row3 = [
