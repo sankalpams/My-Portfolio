@@ -38,9 +38,7 @@ export const HomePage: React.FC = () => {
         <Contact onOpenResume={() => navigate('#/resume')} />
       </ScrollSection3D>
 
-      <ScrollSection3D variant="scale" offsetY={40} rotationDeg={3}>
-        <Footer />
-      </ScrollSection3D>
+      <Footer />
     </div>
   );
 };
