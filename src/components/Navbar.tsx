@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
               MS
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-extrabold tracking-widest text-sm text-white group-hover:text-rose-300 transition-colors uppercase">
+              <span className="font-display font-extrabold tracking-widest text-xs sm:text-sm text-white group-hover:text-rose-300 transition-colors uppercase truncate">
                 MALITH.SANKALPA
               </span>
               {!isHome && (
@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
             {/* Resume Button */}
             <button
               onClick={() => navigate('#/resume')}
-              className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border text-xs font-mono font-medium transition-all ${
+              className={`hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border text-xs font-mono font-medium transition-all ${
                 route.pathname === '/resume'
                   ? 'bg-rose-500 text-white font-bold border-rose-500 shadow-md'
                   : 'bg-zinc-900 hover:bg-zinc-800 border-zinc-800 text-zinc-200 hover:border-rose-500/40'

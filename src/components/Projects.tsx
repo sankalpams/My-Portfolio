@@ -19,117 +19,133 @@ export const Projects: React.FC = () => {
     switch (project.id) {
       case 'financial-ai-coaching':
         return (
-          <div className="w-full h-48 sm:h-56 bg-[#0c0d14] rounded-2xl p-4 border border-zinc-800/80 flex flex-col justify-between overflow-hidden relative group-hover:border-rose-500/40 transition-colors">
-            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2">
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] font-mono uppercase bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded">FYP AI Layer</span>
-                <span className="text-xs font-mono text-zinc-400">Expense & Sentiment Engine</span>
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] sm:text-xs font-mono uppercase bg-rose-500/20 text-rose-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
+                  FYP AI Layer
+                </span>
+                <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
+                  Expense &amp; Sentiment Engine
+                </span>
               </div>
-              <span className="text-[10px] font-mono text-emerald-400 flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Active
+              <span className="text-[10px] sm:text-xs font-mono text-emerald-400 flex items-center gap-1.5 whitespace-nowrap shrink-0">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse" /> Active
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 my-2 font-mono">
-              <div className="p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span className="text-[10px] text-zinc-500 block">Forecast Model</span>
-                <span className="text-xs font-bold text-white">LSTM Sequential</span>
-                <span className="text-[10px] text-rose-400 block mt-0.5">MAE: 4.2%</span>
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 font-mono">
+              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
+                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">Forecast Model</span>
+                <span className="text-xs sm:text-sm font-bold text-white block truncate mt-0.5">LSTM Sequential</span>
+                <span className="text-[10px] sm:text-xs text-rose-400 block mt-0.5 font-semibold">MAE: 4.2%</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span className="text-[10px] text-zinc-500 block">Explainability</span>
-                <span className="text-xs font-bold text-white">SHAP & LIME</span>
-                <span className="text-[10px] text-cyan-400 block mt-0.5">100% Attributed</span>
+              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
+                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">Explainability</span>
+                <span className="text-xs sm:text-sm font-bold text-white block truncate mt-0.5">SHAP &amp; LIME</span>
+                <span className="text-[10px] sm:text-xs text-cyan-400 block mt-0.5 font-semibold">100% Attributed</span>
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400 border-t border-zinc-800/80 pt-2">
-              <span>Flutter Presentation &lt;-&gt; FastAPI AI</span>
-              <span className="text-rose-400 font-semibold">Supabase DB</span>
+            <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
+              <span className="truncate">Flutter UI ↔ FastAPI AI</span>
+              <span className="text-rose-400 font-semibold whitespace-nowrap shrink-0">Supabase DB</span>
             </div>
           </div>
         );
 
       case 'smartcare-hospital-risk':
         return (
-          <div className="w-full h-48 sm:h-56 bg-[#0c0d14] rounded-2xl p-4 border border-zinc-800/80 flex flex-col justify-between overflow-hidden relative group-hover:border-rose-500/40 transition-colors">
-            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2">
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] font-mono uppercase bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded">Healthcare ML</span>
-                <span className="text-xs font-mono text-zinc-400">Clinical Triage Calibration</span>
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] sm:text-xs font-mono uppercase bg-cyan-500/20 text-cyan-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
+                  Healthcare ML
+                </span>
+                <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
+                  Clinical Triage Calibration
+                </span>
               </div>
-              <span className="text-[10px] font-mono text-zinc-400">ROC-AUC Grade</span>
+              <span className="text-[10px] sm:text-xs font-mono text-zinc-400 whitespace-nowrap shrink-0">ROC-AUC Grade</span>
             </div>
 
-            <div className="p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 my-2 font-mono">
-              <div className="flex justify-between text-xs mb-1">
-                <span className="text-zinc-300">Target Leakage Audit</span>
-                <span className="text-emerald-400 font-bold">100% Cleared</span>
+            <div className="p-2.5 sm:p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 font-mono">
+              <div className="flex justify-between text-xs sm:text-sm mb-1 sm:mb-1.5">
+                <span className="text-zinc-200 truncate">Target Leakage Audit</span>
+                <span className="text-emerald-400 font-bold whitespace-nowrap ml-2">100% Cleared</span>
               </div>
-              <div className="w-full bg-zinc-800 h-2 rounded-full overflow-hidden">
+              <div className="w-full bg-zinc-800 h-2 sm:h-2.5 rounded-full overflow-hidden">
                 <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-full w-[94%]" />
               </div>
-              <div className="text-[10px] text-zinc-500 mt-1.5 flex justify-between">
-                <span>Model: Calibrated Logistic Reg</span>
-                <span>Brier Score: Optimal</span>
+              <div className="text-[10px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 flex justify-between gap-2">
+                <span className="truncate">Calibrated Logistic Reg</span>
+                <span className="whitespace-nowrap shrink-0">Brier: Optimal</span>
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400 border-t border-zinc-800/80 pt-2">
-              <span>Native Probability Calibration</span>
-              <span className="text-cyan-400">Odds-Ratio Transparent</span>
+            <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
+              <span className="truncate">Probability Calibration</span>
+              <span className="text-cyan-400 font-semibold whitespace-nowrap shrink-0">Odds-Ratio Open</span>
             </div>
           </div>
         );
 
       case 'ogbn-arxiv-gnn':
         return (
-          <div className="w-full h-48 sm:h-56 bg-[#0c0d14] rounded-2xl p-4 border border-zinc-800/80 flex flex-col justify-between overflow-hidden relative group-hover:border-rose-500/40 transition-colors">
-            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2">
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] font-mono uppercase bg-violet-500/20 text-violet-300 px-2 py-0.5 rounded">Graph Deep Learning</span>
-                <span className="text-xs font-mono text-zinc-400">PyG Citation Topology</span>
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] sm:text-xs font-mono uppercase bg-violet-500/20 text-violet-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
+                  Graph Deep Learning
+                </span>
+                <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
+                  PyG Citation Topology
+                </span>
               </div>
-              <span className="text-[10px] font-mono text-violet-400">169K Nodes</span>
+              <span className="text-[10px] sm:text-xs font-mono text-violet-400 font-semibold whitespace-nowrap shrink-0">169K Nodes</span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 my-2 font-mono">
-              <div className="p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800 text-center">
-                <span className="text-[10px] text-zinc-500 block">GCN Benchmark</span>
-                <span className="text-xs font-bold text-violet-300">Spatial Convolution</span>
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 font-mono">
+              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 text-center">
+                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">GCN Benchmark</span>
+                <span className="text-xs sm:text-sm font-bold text-violet-300 block truncate mt-0.5">Spatial Conv</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800 text-center">
-                <span className="text-[10px] text-zinc-500 block">GAT Benchmark</span>
-                <span className="text-xs font-bold text-pink-300">Multi-Head Attention</span>
+              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 text-center">
+                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">GAT Benchmark</span>
+                <span className="text-xs sm:text-sm font-bold text-pink-300 block truncate mt-0.5">Multi-Head Attn</span>
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400 border-t border-zinc-800/80 pt-2">
-              <span>Streamlit Visual Inference Subgraph</span>
-              <span className="text-violet-400">Word2Vec 128D</span>
+            <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
+              <span className="truncate">Streamlit Visual Subgraph</span>
+              <span className="text-violet-400 font-semibold whitespace-nowrap shrink-0">Word2Vec 128D</span>
             </div>
           </div>
         );
 
       default:
         return (
-          <div className="w-full h-48 sm:h-56 bg-[#0c0d14] rounded-2xl p-4 border border-zinc-800/80 flex flex-col justify-between overflow-hidden relative group-hover:border-rose-500/40 transition-colors">
-            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2">
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] font-mono uppercase bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">MLOps & Tracking</span>
-                <span className="text-xs font-mono text-zinc-400">{project.shortTitle}</span>
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] sm:text-xs font-mono uppercase bg-emerald-500/20 text-emerald-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
+                  MLOps &amp; Tracking
+                </span>
+                <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
+                  {project.shortTitle}
+                </span>
               </div>
-              <span className="text-[10px] font-mono text-zinc-500">DagsHub & DVC</span>
+              <span className="text-[10px] sm:text-xs font-mono text-zinc-400 whitespace-nowrap shrink-0">DagsHub &amp; DVC</span>
             </div>
 
-            <div className="p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 my-2 font-mono text-xs">
-              <div className="text-zinc-300 font-semibold mb-1">Automated Reproducible Pipeline</div>
-              <div className="text-[11px] text-zinc-500">Raw Ingestion -&gt; EDA -&gt; XGBoost Tuning -&gt; Model Registry</div>
+            <div className="p-2.5 sm:p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 font-mono">
+              <div className="text-xs sm:text-sm text-zinc-200 font-semibold mb-1 truncate">Automated Reproducible Pipeline</div>
+              <div className="text-[10px] sm:text-xs text-zinc-400 truncate">Ingestion ➔ EDA ➔ XGBoost ➔ Registry</div>
             </div>
 
-            <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400 border-t border-zinc-800/80 pt-2">
-              <span>100% Reproducible Experiments</span>
-              <span className="text-emerald-400 font-semibold">Production Ready</span>
+            <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
+              <span className="truncate">100% Reproducible Experiments</span>
+              <span className="text-emerald-400 font-semibold whitespace-nowrap shrink-0">Production Ready</span>
             </div>
           </div>
         );

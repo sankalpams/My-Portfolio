@@ -119,23 +119,23 @@ export const MLExplainabilityDemo: React.FC = () => {
           </p>
 
           {/* Model Domain Toggle */}
-          <div className="mt-6 inline-flex p-1 rounded-2xl bg-slate-900/80 dark:bg-slate-900/80 border border-slate-800">
+          <div className="mt-6 inline-flex flex-col sm:flex-row p-1.5 rounded-2xl bg-slate-900/80 dark:bg-slate-900/80 border border-slate-700/80 gap-1 w-full sm:w-auto">
             <button
               onClick={() => setModelType('clinical')}
-              className={`px-5 py-2 rounded-xl text-xs font-semibold transition-all ${
+              className={`px-5 sm:px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all text-center ${
                 modelType === 'clinical'
-                  ? 'bg-brand-500 text-slate-950 shadow-md shadow-brand-500/20'
-                  : 'text-slate-400 dark:text-slate-400 hover:text-slate-200'
+                  ? 'bg-brand-500 text-slate-950 shadow-lg shadow-brand-500/30'
+                  : 'text-slate-200 dark:text-slate-200 hover:text-white hover:bg-slate-800/60'
               }`}
             >
               🏥 Healthcare Risk Classifier (SmartCare)
             </button>
             <button
               onClick={() => setModelType('finance')}
-              className={`px-5 py-2 rounded-xl text-xs font-semibold transition-all ${
+              className={`px-5 sm:px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all text-center ${
                 modelType === 'finance'
-                  ? 'bg-brand-500 text-slate-950 shadow-md shadow-brand-500/20'
-                  : 'text-slate-400 dark:text-slate-400 hover:text-slate-200'
+                  ? 'bg-brand-500 text-slate-950 shadow-lg shadow-brand-500/30'
+                  : 'text-slate-200 dark:text-slate-200 hover:text-white hover:bg-slate-800/60'
               }`}
             >
               📈 Expenditure Predictor (FYP AI Layer)

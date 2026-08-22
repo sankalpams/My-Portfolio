@@ -29,10 +29,10 @@ export const Milestones: React.FC = () => {
 
         {/* Tab Pills */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-2xl bg-[#09090c] border border-zinc-800 gap-1 sm:gap-2">
+          <div className="inline-flex flex-col sm:flex-row p-1.5 rounded-2xl bg-[#09090c] border border-zinc-800 gap-1.5 w-full sm:w-auto">
             <button
               onClick={() => setActiveTab('education')}
-              className={`flex items-center gap-2 px-5 sm:px-7 py-2.5 rounded-xl text-xs sm:text-sm font-mono font-medium transition-all ${
+              className={`flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 rounded-xl text-xs sm:text-sm font-mono font-medium transition-all ${
                 activeTab === 'education'
                   ? 'bg-rose-500 text-white font-bold shadow-lg shadow-rose-500/20'
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
@@ -44,7 +44,7 @@ export const Milestones: React.FC = () => {
 
             <button
               onClick={() => setActiveTab('certificates')}
-              className={`flex items-center gap-2 px-5 sm:px-7 py-2.5 rounded-xl text-xs sm:text-sm font-mono font-medium transition-all ${
+              className={`flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 rounded-xl text-xs sm:text-sm font-mono font-medium transition-all ${
                 activeTab === 'certificates'
                   ? 'bg-rose-500 text-white font-bold shadow-lg shadow-rose-500/20'
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-900'

@@ -14,15 +14,15 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="relative z-10">
-      <ScrollSection3D variant="rise" offsetY={60} rotationDeg={4}>
+      <ScrollSection3D variant="rise" offsetY={40} rotationDeg={2}>
         <Hero onOpenResume={() => navigate('#/resume')} />
       </ScrollSection3D>
 
-      <ScrollSection3D variant="tiltLeft" rotationDeg={5}>
+      <ScrollSection3D variant="tiltLeft" rotationDeg={2.5}>
         <About />
       </ScrollSection3D>
 
-      <ScrollSection3D variant="tiltRight" rotationDeg={5}>
+      <ScrollSection3D variant="tiltRight" rotationDeg={2.5}>
         <Projects />
       </ScrollSection3D>
 
@@ -30,11 +30,11 @@ export const HomePage: React.FC = () => {
         <SkillsMarquee />
       </ScrollSection3D>
 
-      <ScrollSection3D variant="rise" rotationDeg={4}>
+      <ScrollSection3D variant="rise" rotationDeg={2}>
         <Milestones />
       </ScrollSection3D>
 
-      <ScrollSection3D variant="tiltLeft" rotationDeg={5}>
+      <ScrollSection3D variant="tiltLeft" rotationDeg={2.5}>
         <Contact onOpenResume={() => navigate('#/resume')} />
       </ScrollSection3D>
 
