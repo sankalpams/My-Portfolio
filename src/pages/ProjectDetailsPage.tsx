@@ -102,6 +102,15 @@ export const ProjectDetailsPage: React.FC = () => {
               </span>
             </div>
 
+            {/* Visual Screenshot Showcase */}
+            <div className="mb-6 rounded-2xl overflow-hidden border border-zinc-800 bg-black/40 shadow-inner group">
+              <img 
+                src="/smartcare_thumb.png" 
+                alt="SmartCare Clinical Intake & Diagnostics" 
+                className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
+              />
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
                 <span className="text-[11px] text-zinc-500 block uppercase">Champion Model</span>
@@ -142,6 +151,15 @@ export const ProjectDetailsPage: React.FC = () => {
               <span className="text-xs text-zinc-400 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800">
                 PyTorch Geometric (PyG) + Streamlit
               </span>
+            </div>
+
+            {/* Visual Screenshot Showcase */}
+            <div className="mb-6 rounded-2xl overflow-hidden border border-zinc-800 bg-black/40 shadow-inner group">
+              <img 
+                src="/ogbn_arxiv_thumb.png" 
+                alt="OGBN-Arxiv Deep Graph Intelligence Suite" 
+                className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
+              />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">

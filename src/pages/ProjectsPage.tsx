@@ -78,63 +78,66 @@ export const ProjectsPage: React.FC = () => {
 
       case 'smartcare-hospital-risk':
         return (
-          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-3 sm:p-4 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
             <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
               <div className="flex items-center gap-2 min-w-0">
                 <span className="text-[10px] sm:text-xs font-mono uppercase bg-cyan-500/20 text-cyan-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
                   Healthcare ML
                 </span>
                 <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
-                  Clinical Triage Calibration
+                  SmartCare Health Engine
                 </span>
               </div>
-              <span className="text-[10px] sm:text-xs font-mono text-zinc-400 whitespace-nowrap shrink-0">ROC-AUC Grade</span>
+              <span className="text-[10px] sm:text-xs font-mono text-emerald-400 whitespace-nowrap shrink-0">
+                ● Calibrated
+              </span>
             </div>
 
-            <div className="p-2.5 sm:p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 font-mono">
-              <div className="flex justify-between text-xs sm:text-sm mb-1 sm:mb-1.5">
-                <span className="text-zinc-200 truncate">Target Leakage Audit</span>
-                <span className="text-emerald-400 font-bold whitespace-nowrap ml-2">100% Cleared</span>
-              </div>
-              <div className="w-full bg-zinc-800 h-2 sm:h-2.5 rounded-full overflow-hidden">
-                <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-full w-[94%]" />
-              </div>
-              <div className="text-[10px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 flex justify-between gap-2">
-                <span className="truncate">Calibrated Logistic Reg</span>
-                <span className="whitespace-nowrap shrink-0">Brier: Optimal</span>
+            <div className="relative rounded-xl overflow-hidden border border-zinc-800/90 aspect-[16/8] sm:aspect-[16/7.5] group/thumb">
+              <img 
+                src="/smartcare_thumb.png" 
+                alt="SmartCare Clinical Intake & Diagnostics" 
+                className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono text-zinc-300">
+                <span className="bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">Clinical Intake Form</span>
+                <span className="text-cyan-300 font-semibold bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">Platt Scaling</span>
               </div>
             </div>
 
             <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
               <span className="truncate">Probability Calibration</span>
-              <span className="text-cyan-400 font-semibold whitespace-nowrap shrink-0">Odds-Ratio Open</span>
+              <span className="text-cyan-400 font-semibold whitespace-nowrap shrink-0">ROC-AUC: 0.94</span>
             </div>
           </div>
         );
 
       case 'ogbn-arxiv-gnn':
         return (
-          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-3 sm:p-4 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
             <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
               <div className="flex items-center gap-2 min-w-0">
                 <span className="text-[10px] sm:text-xs font-mono uppercase bg-violet-500/20 text-violet-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
                   Graph Deep Learning
                 </span>
                 <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
-                  PyG Citation Topology
+                  OGBN-Arxiv Graph Suite
                 </span>
               </div>
               <span className="text-[10px] sm:text-xs font-mono text-violet-400 font-semibold whitespace-nowrap shrink-0">169K Nodes</span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 sm:gap-3 font-mono">
-              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 text-center">
-                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">GCN Benchmark</span>
-                <span className="text-xs sm:text-sm font-bold text-violet-300 block truncate mt-0.5">Spatial Conv</span>
-              </div>
-              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 text-center">
-                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">GAT Benchmark</span>
-                <span className="text-xs sm:text-sm font-bold text-pink-300 block truncate mt-0.5">Multi-Head Attn</span>
+            <div className="relative rounded-xl overflow-hidden border border-zinc-800/90 aspect-[16/8] sm:aspect-[16/7.5] group/thumb">
+              <img 
+                src="/ogbn_arxiv_thumb.png" 
+                alt="OGBN-Arxiv Deep Graph Intelligence Suite" 
+                className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono text-zinc-300">
+                <span className="bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">3D Citation Manifold</span>
+                <span className="text-violet-300 font-semibold bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">GCN vs GAT</span>
               </div>
             </div>
 

@@ -30,6 +30,7 @@ export interface Project {
   githubUrl: string;
   liveUrl?: string;
   dagshubUrl?: string;
+  image?: string;
   featured: boolean;
   accentColor: string;
 }

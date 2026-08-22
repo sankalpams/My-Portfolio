@@ -104,6 +104,7 @@ export const projectsData: Project[] = [
     ],
     githubUrl: 'https://github.com/Ravindi373/SmartCare-Hospital.git',
     liveUrl: 'https://smartcare-hospital-group2.streamlit.app/',
+    image: '/smartcare_thumb.png',
     featured: true,
     accentColor: '#38bdf8'
   },
@@ -154,6 +155,7 @@ export const projectsData: Project[] = [
     ],
     githubUrl: 'https://github.com/sankalpams/OGBN-Arxiv-GNN-Classification.git',
     liveUrl: 'https://sankalpams-ogbn-arxiv-gnn-classification-dashboardapp-2jve1n.streamlit.app/',
+    image: '/ogbn_arxiv_thumb.png',
     featured: true,
     accentColor: '#818cf8'
   },
@@ -260,6 +262,7 @@ export const projectsData: Project[] = [
     ],
     githubUrl: 'https://github.com/sankalpams/My-Portfolio',
     liveUrl: 'https://sankalpams.github.io/My-Portfolio/',
+    image: '/portfolio_thumb.png',
     featured: true,
     accentColor: '#f43f5e'
   },
