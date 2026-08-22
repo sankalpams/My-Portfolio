@@ -334,34 +334,36 @@ export const ProjectsPage: React.FC = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-4 border-t border-zinc-800 flex flex-wrap items-center gap-3">
-                <button
-                  onClick={() => navigate(`#/project/${project.id}`)}
-                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-md shadow-rose-500/20 hover:scale-105"
-                >
-                  <BookOpen className="w-3.5 h-3.5" />
-                  <span>Open Full Case Study</span>
-                </button>
+              <div className="pt-5 border-t border-zinc-800 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
+                <div className="grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-3 flex-1">
+                  <button
+                    onClick={() => navigate(`#/project/${project.id}`)}
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-rose-500 hover:bg-rose-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-md shadow-rose-500/20 hover:scale-[1.02] text-center"
+                  >
+                    <BookOpen className="w-4 h-4 shrink-0" />
+                    <span>Open Full Case Study</span>
+                  </button>
 
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white border border-zinc-800 text-xs font-mono font-medium transition-all"
-                >
-                  <GithubIcon className="w-3.5 h-3.5 text-zinc-400" />
-                  <span>Source</span>
-                </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-100 hover:text-white border border-zinc-800 hover:border-rose-500/40 text-xs font-mono font-bold transition-all hover:scale-[1.02] text-center"
+                  >
+                    <GithubIcon className="w-4 h-4 shrink-0 text-zinc-400" />
+                    <span>Source</span>
+                  </a>
+                </div>
 
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-zinc-200 text-slate-950 text-xs font-mono font-bold transition-all shadow-md"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white hover:bg-zinc-200 text-slate-950 text-xs font-mono font-bold transition-all shadow-md hover:scale-[1.02] text-center"
                   >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                    <span>{project.dagshubUrl ? 'DagsHub' : 'Live App'}</span>
+                    <ExternalLink className="w-4 h-4 shrink-0 text-slate-950" />
+                    <span>{project.dagshubUrl ? 'DagsHub' : project.id === 'interactive-data-science-portfolio' ? 'Live Website' : 'Live Streamlit App'}</span>
                   </a>
                 )}
               </div>
