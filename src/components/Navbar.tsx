@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Gamepad2, FileText, ArrowLeft } from 'lucide-react';
+import { Menu, X, FileText, ArrowLeft } from 'lucide-react';
 import { useRouter } from '../router/RouterContext';
 
 export const Navbar: React.FC = () => {
@@ -100,20 +100,6 @@ export const Navbar: React.FC = () => {
 
           {/* Right Action Icons */}
           <div className="flex items-center gap-2.5">
-            
-            {/* 2048 Game Button */}
-            <button
-              onClick={() => navigate('#/arcade')}
-              aria-label="Play 2048 Game"
-              className={`p-2 rounded-xl border transition-all hover:scale-105 ${
-                route.pathname === '/arcade'
-                  ? 'bg-rose-500/20 border-rose-500/50 text-rose-300'
-                  : 'border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-300 hover:text-rose-300'
-              }`}
-              title="Play 2048 Arcade Game"
-            >
-              <Gamepad2 className="w-4 h-4" />
-            </button>
 
             {/* Resume Button */}
             <button
@@ -156,27 +142,16 @@ export const Navbar: React.FC = () => {
               </button>
             ))}
 
-            <div className="pt-3 border-t border-zinc-800 grid grid-cols-2 gap-2">
+            <div className="pt-3 border-t border-zinc-800">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   navigate('#/resume');
                 }}
-                className="p-3 rounded-xl bg-zinc-900 text-zinc-200 font-medium flex items-center justify-center gap-2 border border-zinc-800"
+                className="w-full p-3 rounded-xl bg-zinc-900 text-zinc-200 font-medium flex items-center justify-center gap-2 border border-zinc-800 hover:bg-zinc-800 hover:text-white transition-colors"
               >
                 <FileText className="w-4 h-4 text-rose-400" />
-                <span>Resume CV</span>
-              </button>
-
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  navigate('#/arcade');
-                }}
-                className="p-3 rounded-xl bg-zinc-900 text-rose-300 font-medium flex items-center justify-center gap-2 border border-zinc-800"
-              >
-                <Gamepad2 className="w-4 h-4" />
-                <span>Play 2048</span>
+                <span>Resume (CV)</span>
               </button>
             </div>
           </div>

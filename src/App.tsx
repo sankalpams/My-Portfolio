@@ -6,7 +6,6 @@ import { HomePage } from './pages/HomePage';
 import { ProjectDetailsPage } from './pages/ProjectDetailsPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ResumePage } from './pages/ResumePage';
-import { ArcadePage } from './pages/ArcadePage';
 import { ContactPage } from './pages/ContactPage';
 
 export const AppContent: React.FC = () => {
@@ -25,9 +24,6 @@ export const AppContent: React.FC = () => {
       case '/resume':
       case '/cv':
         return <ResumePage />;
-      case '/arcade':
-      case '/game':
-        return <ArcadePage />;
       case '/contact':
         return <ContactPage />;
       case '/':
