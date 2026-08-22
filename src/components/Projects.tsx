@@ -158,11 +158,8 @@ export const Projects: React.FC = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2">
-            SHOWCASE
-          </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white dark:text-white tracking-tight uppercase">
-            FEATURED SYSTEMS
+            MY PROJECTS &amp; CONTRIBUTIONS
           </h2>
           <div className="w-12 h-1 bg-rose-400 rounded-full mt-3" />
         </div>
