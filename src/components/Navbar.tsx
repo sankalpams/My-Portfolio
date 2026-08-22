@@ -55,8 +55,8 @@ export const Navbar: React.FC = () => {
             onClick={() => navigate('#/')}
             className="flex items-center gap-2.5 focus:outline-none group text-left"
           >
-            <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-700 flex items-center justify-center text-rose-400 font-display font-bold text-xs tracking-wider group-hover:border-rose-500/50 group-hover:scale-105 transition-all">
-              MS
+            <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-700 overflow-hidden flex items-center justify-center group-hover:border-rose-500/50 group-hover:scale-105 transition-all shadow-sm">
+              <img src="/favicon.png" alt="MS Logo" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
               <span className="font-display font-extrabold tracking-widest text-xs sm:text-sm text-white group-hover:text-rose-300 transition-colors uppercase truncate">
