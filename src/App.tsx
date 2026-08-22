@@ -8,7 +8,6 @@ import { ProjectsPage } from './pages/ProjectsPage';
 import { ResumePage } from './pages/ResumePage';
 import { ArcadePage } from './pages/ArcadePage';
 import { ContactPage } from './pages/ContactPage';
-import { ChatbotAssistant } from './components/ChatbotAssistant';
 
 export const AppContent: React.FC = () => {
   const { route } = useRouter();
@@ -68,9 +67,6 @@ export const AppContent: React.FC = () => {
       <main className="relative z-10 min-h-screen">
         {renderPage()}
       </main>
-
-      {/* Floating AI Chatbot Assistant */}
-      <ChatbotAssistant />
 
     </div>
   );
