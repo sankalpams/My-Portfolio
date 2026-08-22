@@ -211,8 +211,8 @@ export const projectsData: Project[] = [
   },
   {
     id: 'interactive-data-science-portfolio',
-    title: 'Modern Interactive Data Science & Machine Learning Portfolio',
-    shortTitle: 'Interactive ML Portfolio Website',
+    title: 'My Portfolio',
+    shortTitle: 'My Portfolio',
     subtitle: 'Responsive High-Performance Personal Web Showcase',
     category: 'Full-Stack & Web',
     status: 'Completed',
