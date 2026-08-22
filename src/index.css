@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #000000;
+    --text-color: #f8fafc;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Outer Edge Ambient Vignette */
+.ambient-vignette {
+  box-shadow: inset 0 0 120px rgba(56, 189, 248, 0.12);
+  pointer-events: none;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fda4af;
+}
+
+/* Glassmorphism */
+.glass-nav {
+  background: rgba(8, 8, 10, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.card-dark {
+  background: #09090c;
+  border: 1px solid #181820;
+}
+
+.light .card-dark {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Dot pattern radar grid background */
+.radar-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.light .radar-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.radar-grid-dense {
+  background-image: radial-gradient(rgba(244, 63, 94, 0.18) 1.2px, transparent 1.2px);
+  background-size: 18px 18px;
+}
+
+/* Hide scrollbar for tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* =========================================================
+   PERFECT SEAMLESS 2-TRACK MARQUEE (NO GAPS ON ANY SCREEN)
+   ========================================================= */
+@keyframes marquee-scroll-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-100% - 0.75rem), 0, 0);
+  }
+}
+
+@keyframes marquee-scroll-right {
+  0% {
+    transform: translate3d(calc(-100% - 0.75rem), 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.marquee-track-left {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.75rem;
+  animation: marquee-scroll-left 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track-right {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.75rem;
+  animation: marquee-scroll-right 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .marquee-track-left,
+.marquee-container:hover .marquee-track-right {
+  animation-play-state: paused;
+}
+
+/* Typewriter cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
