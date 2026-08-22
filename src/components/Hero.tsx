@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             {/* Availability Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-8">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Open to Opportunities • 2027</span>
+              <span>Open to Opportunities</span>
             </div>
 
             {/* Tabular Metadata Grid (Sanket Chaudhari Style) */}
