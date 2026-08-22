@@ -13,7 +13,6 @@ import {
 import { GithubIcon } from '../components/Icons';
 import { projectsData } from '../data/projectsData';
 import { useRouter } from '../router/RouterContext';
-import { MLExplainabilityDemo } from '../components/MLExplainabilityDemo';
 
 export const ProjectDetailsPage: React.FC = () => {
   const { route, navigate } = useRouter();
@@ -503,20 +502,7 @@ export const ProjectDetailsPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Integrated Interactive Sandbox (For explainability projects) */}
-        {(project.id === 'financial-ai-coaching' || project.id === 'smartcare-hospital-risk') && (
-          <div className="mb-14">
-            <div className="mb-6">
-              <span className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-1 block">
-                LIVE INTERACTIVE COMPONENT
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-display font-black text-white tracking-tight uppercase">
-                Model Explainability & Calibration Workbench
-              </h2>
-            </div>
-            <MLExplainabilityDemo />
-          </div>
-        )}
+
 
         {/* Technologies & Frameworks */}
         <div className="rounded-3xl bg-[#09090c] border border-zinc-800 p-6 sm:p-8 shadow-xl mb-14">
