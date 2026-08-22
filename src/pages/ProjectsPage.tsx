@@ -21,7 +21,8 @@ export const ProjectsPage: React.FC = () => {
     'Deep Learning & NLP',
     'Machine Learning',
     'Graph Neural Networks',
-    'MLOps & Systems'
+    'MLOps & Systems',
+    'Full-Stack & Web'
   ];
 
   const filteredProjects = useMemo(() => {
@@ -140,6 +141,43 @@ export const ProjectsPage: React.FC = () => {
             <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
               <span className="truncate">Streamlit Visual Subgraph</span>
               <span className="text-violet-400 font-semibold whitespace-nowrap shrink-0">Word2Vec 128D</span>
+            </div>
+          </div>
+        );
+
+      case 'interactive-data-science-portfolio':
+        return (
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] sm:text-xs font-mono uppercase bg-rose-500/20 text-rose-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
+                  Web &amp; UI/UX
+                </span>
+                <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
+                  React 18 &amp; TypeScript
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-xs font-mono text-emerald-400 flex items-center gap-1.5 whitespace-nowrap shrink-0">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse" /> Live System
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 font-mono">
+              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
+                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">Framework</span>
+                <span className="text-xs sm:text-sm font-bold text-white block truncate mt-0.5">Vite + React 18</span>
+                <span className="text-[10px] sm:text-xs text-rose-400 block mt-0.5 font-semibold">Strict TS</span>
+              </div>
+              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
+                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">Motion Engine</span>
+                <span className="text-xs sm:text-sm font-bold text-white block truncate mt-0.5">Framer Motion</span>
+                <span className="text-[10px] sm:text-xs text-cyan-400 block mt-0.5 font-semibold">60/120 FPS</span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
+              <span className="truncate">Tailwind CSS + Radar Grid</span>
+              <span className="text-rose-400 font-semibold whitespace-nowrap shrink-0">100% Mobile Fluid</span>
             </div>
           </div>
         );

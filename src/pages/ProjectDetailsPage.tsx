@@ -213,6 +213,48 @@ export const ProjectDetailsPage: React.FC = () => {
           </div>
         );
 
+      case 'interactive-data-science-portfolio':
+        return (
+          <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#14090c] border border-rose-500/30 font-mono shadow-2xl relative overflow-hidden">
+            <div className="flex flex-wrap items-center justify-between border-b border-zinc-800 pb-3 sm:pb-4 mb-4 sm:mb-6 gap-2 sm:gap-3">
+              <div className="flex items-center gap-2.5">
+                <span className="w-3 h-3 rounded-full bg-rose-400 animate-pulse" />
+                <span className="text-xs font-bold text-rose-300 uppercase tracking-wider">
+                  Interactive Web Architecture & Design System
+                </span>
+              </div>
+              <span className="text-xs text-zinc-400 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800">
+                React 18 + TypeScript + Tailwind CSS
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
+                <span className="text-[11px] text-zinc-500 block uppercase">Motion Performance</span>
+                <span className="text-base font-bold text-white mt-1 block">60/120 FPS Framer Motion</span>
+                <span className="text-xs text-rose-400 mt-1 block font-semibold">GPU Subpixel Keyframes</span>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
+                <span className="text-[11px] text-zinc-500 block uppercase">Design Aesthetic</span>
+                <span className="text-base font-bold text-white mt-1 block">Radar Grid & Glow Mesh</span>
+                <span className="text-xs text-cyan-400 mt-1 block font-semibold">Unified Poppins Typography</span>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
+                <span className="text-[11px] text-zinc-500 block uppercase">Responsiveness</span>
+                <span className="text-base font-bold text-white mt-1 block">100% Fluid Scaling</span>
+                <span className="text-xs text-emerald-400 mt-1 block font-semibold">Mobile-First 320px to 4K</span>
+              </div>
+            </div>
+
+            <div className="text-xs text-zinc-400 flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-zinc-800/80">
+              <span>Client-Side Hash Router & Deep Linking</span>
+              <span className="text-rose-400 font-semibold">Vite · TypeScript · Tailwind CSS</span>
+            </div>
+          </div>
+        );
+
       default:
         return (
           <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#141009] border border-amber-500/30 font-mono shadow-2xl relative overflow-hidden">

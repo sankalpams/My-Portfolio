@@ -208,6 +208,62 @@ export const projectsData: Project[] = [
     accentColor: '#10b981'
   },
   {
+    id: 'interactive-data-science-portfolio',
+    title: 'Modern Interactive Data Science & Machine Learning Portfolio',
+    shortTitle: 'Interactive ML Portfolio Website',
+    subtitle: 'Responsive High-Performance Personal Web Showcase',
+    category: 'Full-Stack & Web',
+    status: 'Completed',
+    role: 'Lead Designer & Frontend Architect',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite', 'UI/UX', 'Responsive Design'],
+    overview: 'A state-of-the-art personal engineering portfolio built with React 18, TypeScript, TailwindCSS, and Framer Motion, featuring buttery smooth 60fps hardware-accelerated animations, Poppins typography, radar grid textures, and deep-dive technical project case studies.',
+    bullets: [
+      'Engineered a modular React 18 + TypeScript multi-page architecture with lightweight client-side routing and dedicated interactive project case studies.',
+      'Crafted a high-contrast dark aesthetic with custom ambient glow meshes, radar texture backdrops, and Poppins font hierarchy across all components.',
+      'Implemented buttery smooth scroll reveals with quintic ease-out curves, hardware-accelerated 3D transforms, and seamless dual-track infinite marquee ticker ribbons.',
+      'Achieved 100% mobile viewport responsiveness down to 320px with adaptive elastic cards and touch-optimized navigation drawers.'
+    ],
+    keyHighlights: [
+      'Modular React 18 & TypeScript Architecture',
+      'Hardware-Accelerated 60fps Framer Motion Physics',
+      'Unified Brand Identity with Custom Golden MS Monogram',
+      'Deep-Dive Architecture & Metric Case Studies',
+      'Zero-Delay Mobile-Optimized Responsive Layouts'
+    ],
+    architecture: [
+      {
+        layer: 'Client Presentation Layer',
+        technology: 'React 18 & TypeScript',
+        responsibility: 'Component-driven user interface with strict typing, modular layout structures, and instant client-side hash routing.'
+      },
+      {
+        layer: 'Design System & Theming',
+        technology: 'Tailwind CSS & Custom Theme Context',
+        responsibility: 'Custom radar-grid backgrounds, ambient gradient orbs, and glassmorphism styling.'
+      },
+      {
+        layer: 'Motion & Physics Engine',
+        technology: 'Framer Motion & GPU Keyframes',
+        responsibility: 'Fluid quintic ease-out scroll reveal animations, dual-track skills marquee, and micro-interactions.'
+      },
+      {
+        layer: 'Tooling & Deployment',
+        technology: 'Vite & GitHub Pages',
+        responsibility: 'Lightning-fast hot module replacement, optimized production bundling, and automated deployment.'
+      }
+    ],
+    metrics: [
+      { label: 'Architecture', value: 'React 18 + Vite', subtext: 'TypeScript Strictly Typed' },
+      { label: 'Design System', value: 'Tailwind CSS', subtext: 'Dark Radar Theme' },
+      { label: 'Animation', value: 'Framer Motion', subtext: '60/120 FPS Buttery Smooth' },
+      { label: 'Responsiveness', value: 'Mobile First', subtext: '100% Fluid Scaling' }
+    ],
+    githubUrl: 'https://github.com/sankalpams/My-Portfolio',
+    liveUrl: 'https://sankalpams.github.io/My-Portfolio/',
+    featured: true,
+    accentColor: '#f43f5e'
+  },
+  {
     id: 'sapro-greenhouse-system',
     title: 'SAPRO v1.0 — Smart Greenhouse Management System',
     shortTitle: 'SAPRO v1.0 Smart Greenhouse',

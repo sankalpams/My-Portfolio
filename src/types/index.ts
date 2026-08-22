@@ -1,4 +1,4 @@
-export type ProjectCategory = 'All' | 'Machine Learning' | 'Deep Learning & NLP' | 'Graph Neural Networks' | 'MLOps & Systems';
+export type ProjectCategory = 'All' | 'Machine Learning' | 'Deep Learning & NLP' | 'Graph Neural Networks' | 'MLOps & Systems' | 'Full-Stack & Web';
 
 export interface ProjectMetric {
   label: string;
