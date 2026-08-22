@@ -31,8 +31,8 @@ export default {
       animation: {
         'marquee': 'marquee 40s linear infinite',
         'marquee-reverse': 'marquee-reverse 40s linear infinite',
-        'pulse-glow': 'pulseGlow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'pulse-glow': 'pulseGlow 8s cubic-bezier(0.4, 0, 0.2, 1) infinite',
+        'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards',
       },
       keyframes: {
         marquee: {
@@ -44,11 +44,11 @@ export default {
           '100%': { transform: 'translateX(0%)' },
         },
         pulseGlow: {
-          '0%, 100%': { opacity: '0.3' },
-          '50%': { opacity: '0.7' },
+          '0%, 100%': { opacity: '0.35', transform: 'scale(1)' },
+          '50%': { opacity: '0.7', transform: 'scale(1.03)' },
         },
         fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '0%': { opacity: '0', transform: 'translateY(14px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         }
       }

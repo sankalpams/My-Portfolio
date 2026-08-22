@@ -23,11 +23,11 @@ export const ScrollSection3D: React.FC<ScrollSection3DProps> = ({
   const getInitial = () => {
     switch (variant) {
       case 'tiltLeft':
-        return { opacity: 0, y: offsetY, x: -16 };
+        return { opacity: 0, y: offsetY, x: -12 };
       case 'tiltRight':
-        return { opacity: 0, y: offsetY, x: 16 };
+        return { opacity: 0, y: offsetY, x: 12 };
       case 'scale':
-        return { opacity: 0, scale: 0.97, y: offsetY };
+        return { opacity: 0, scale: 0.98, y: offsetY };
       case 'rise':
       default:
         return { opacity: 0, y: offsetY };
@@ -38,13 +38,16 @@ export const ScrollSection3D: React.FC<ScrollSection3DProps> = ({
     <motion.div
       initial={getInitial()}
       whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.05, margin: "0px 0px -30px 0px" }}
+      viewport={{ once: true, amount: 0.08, margin: "0px 0px -40px 0px" }}
       transition={{
-        duration: 0.4,
-        ease: [0.16, 1, 0.3, 1], // Ultra-responsive, zero-delay cubic-bezier
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1], // Quintic buttery ease-out curve
       }}
       className={className}
-      style={{ willChange: 'transform, opacity' }}
+      style={{ 
+        willChange: 'transform, opacity',
+        transform: 'translateZ(0)',
+      }}
     >
       {children}
     </motion.div>
