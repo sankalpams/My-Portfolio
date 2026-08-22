@@ -294,7 +294,7 @@ export const Projects: React.FC = () => {
             onClick={() => navigate('#/projects')}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-rose-500/40 text-xs font-mono text-rose-300 font-bold tracking-wider uppercase transition-all shadow-lg hover:scale-105"
           >
-            <span>EXPLORE ALL 5 SYSTEMS &amp; RESEARCH</span>
+            <span>Explore My Projects &amp; Contributions</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
