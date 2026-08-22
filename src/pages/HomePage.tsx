@@ -14,7 +14,7 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="relative z-10">
-      <ScrollSection3D variant="rise" offsetY={40} rotationDeg={2}>
+      <ScrollSection3D variant="none">
         <Hero onOpenResume={() => navigate('#/resume')} />
       </ScrollSection3D>
 

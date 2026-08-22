@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 interface ScrollSection3DProps {
@@ -14,95 +14,37 @@ export const ScrollSection3D: React.FC<ScrollSection3DProps> = ({
   children,
   className = '',
   variant = 'rise',
-  offsetY = 50,
-  rotationDeg = 3,
+  offsetY = 24,
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  });
-
-  // Much softer spring: lower stiffness = slower & smoother, higher damping = less bounce
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 40,
-    damping: 30,
-    restDelta: 0.0005,
-  });
-
-  // Gentler opacity: start partially visible so sections don't "pop" from invisible
-  const opacity = useTransform(smoothProgress, [0, 0.2, 0.5], [0.15, 0.6, 1]);
-
-  // Softer vertical movement
-  const translateY = useTransform(smoothProgress, [0, 0.5], [offsetY, 0]);
-  const translateY_small = useTransform(smoothProgress, [0, 0.5], [25, 0]);
-  const translateY_medium = useTransform(smoothProgress, [0, 0.5], [30, 0]);
-
-  // Gentler horizontal slides
-  const translateX_left = useTransform(smoothProgress, [0, 0.5], [-30, 0]);
-  const translateX_right = useTransform(smoothProgress, [0, 0.5], [30, 0]);
-
-  // Subtle rotations
-  const rotateX = useTransform(smoothProgress, [0, 0.5], [rotationDeg, 0]);
-  const rotateY_left = useTransform(smoothProgress, [0, 0.5], [rotationDeg * 0.6, 0]);
-  const rotateY_right = useTransform(smoothProgress, [0, 0.5], [-rotationDeg * 0.6, 0]);
-
-  // Scale starts closer to 1 for subtlety
-  const scaleVal = useTransform(smoothProgress, [0, 0.5], [0.94, 1]);
-
   if (variant === 'none') {
     return <div className={className}>{children}</div>;
   }
 
-  let style: Record<string, unknown>;
-  switch (variant) {
-    case 'tiltLeft':
-      style = {
-        opacity,
-        x: translateX_left,
-        y: translateY_small,
-        rotateY: rotateY_left,
-        transformPerspective: 1400,
-      };
-      break;
-    case 'tiltRight':
-      style = {
-        opacity,
-        x: translateX_right,
-        y: translateY_small,
-        rotateY: rotateY_right,
-        transformPerspective: 1400,
-      };
-      break;
-    case 'scale':
-      style = {
-        opacity,
-        scale: scaleVal,
-        y: translateY_medium,
-        transformPerspective: 1400,
-      };
-      break;
-    case 'rise':
-    default:
-      style = {
-        opacity,
-        y: translateY,
-        rotateX,
-        transformPerspective: 1400,
-      };
-      break;
-  }
+  const getInitial = () => {
+    switch (variant) {
+      case 'tiltLeft':
+        return { opacity: 0, y: offsetY, x: -16 };
+      case 'tiltRight':
+        return { opacity: 0, y: offsetY, x: 16 };
+      case 'scale':
+        return { opacity: 0, scale: 0.97, y: offsetY };
+      case 'rise':
+      default:
+        return { opacity: 0, y: offsetY };
+    }
+  };
 
   return (
     <motion.div
-      ref={ref}
-      style={{
-        willChange: 'transform, opacity',
-        transformOrigin: 'center bottom',
-        ...style,
+      initial={getInitial()}
+      whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.05, margin: "0px 0px -30px 0px" }}
+      transition={{
+        duration: 0.4,
+        ease: [0.16, 1, 0.3, 1], // Ultra-responsive, zero-delay cubic-bezier
       }}
       className={className}
+      style={{ willChange: 'transform, opacity' }}
     >
       {children}
     </motion.div>

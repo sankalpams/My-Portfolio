@@ -44,13 +44,13 @@ export const AppContent: React.FC = () => {
         <div className="absolute -top-24 -right-24 w-[350px] h-[350px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] rounded-full bg-gradient-to-br from-rose-500/25 via-pink-500/15 to-transparent blur-[120px] animate-pulse-glow" />
         
         {/* Mid-Left Cyan/Rose Accent Glow */}
-        <div className="absolute top-[30%] -left-40 w-[400px] h-[400px] sm:w-[650px] sm:h-[650px] lg:w-[850px] lg:h-[850px] rounded-full bg-gradient-to-tr from-cyan-500/20 via-rose-500/15 to-transparent blur-[140px] animate-pulse-glow" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute top-[30%] -left-40 w-[400px] h-[400px] sm:w-[650px] sm:h-[650px] lg:w-[850px] lg:h-[850px] rounded-full bg-gradient-to-tr from-cyan-500/20 via-rose-500/15 to-transparent blur-[140px] animate-pulse-glow" />
         
         {/* Mid-Right Rose Glow */}
-        <div className="absolute top-[60%] -right-40 w-[350px] h-[350px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] rounded-full bg-gradient-to-bl from-rose-500/20 via-pink-500/10 to-transparent blur-[130px] animate-pulse-glow" style={{ animationDelay: '5s' }} />
+        <div className="absolute top-[60%] -right-40 w-[350px] h-[350px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] rounded-full bg-gradient-to-bl from-rose-500/20 via-pink-500/10 to-transparent blur-[130px] animate-pulse-glow" />
         
         {/* Bottom Ambient Glow */}
-        <div className="absolute -bottom-32 left-[20%] w-[400px] h-[400px] sm:w-[700px] sm:h-[700px] lg:w-[900px] lg:h-[900px] rounded-full bg-gradient-to-t from-rose-500/20 via-cyan-500/15 to-transparent blur-[140px] animate-pulse-glow" style={{ animationDelay: '3.5s' }} />
+        <div className="absolute -bottom-32 left-[20%] w-[400px] h-[400px] sm:w-[700px] sm:h-[700px] lg:w-[900px] lg:h-[900px] rounded-full bg-gradient-to-t from-rose-500/20 via-cyan-500/15 to-transparent blur-[140px] animate-pulse-glow" />
       </div>
 
       {/* 3. Outer Ambient Vignette */}
