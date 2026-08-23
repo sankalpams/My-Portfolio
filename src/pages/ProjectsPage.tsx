@@ -215,46 +215,46 @@ export const ProjectsPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-28 text-white">
+    <div className="min-h-screen py-28 text-zinc-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Link & Title */}
         <div className="mb-10">
           <button
             onClick={() => navigate('#/')}
-            className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-rose-400 transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-xs font-mono text-zinc-500 dark:text-zinc-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Home Overview</span>
           </button>
 
           <div className="flex flex-col items-center text-center">
-            <span className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2">
+            <span className="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-2">
               COMPLETE PORTFOLIO CATALOG
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white tracking-tight uppercase">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-zinc-900 dark:text-white tracking-tight uppercase">
               ENGINEERED ML &amp; DL SYSTEMS
             </h1>
-            <div className="w-12 h-1 bg-rose-400 rounded-full mt-3 mb-4" />
-            <p className="max-w-2xl text-xs sm:text-sm text-zinc-400 font-mono">
+            <div className="w-12 h-1 bg-rose-500 rounded-full mt-3 mb-4" />
+            <p className="max-w-2xl text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-mono">
               In-depth research projects, neural network architectures, healthcare diagnostics, and production MLOps pipelines.
             </p>
           </div>
         </div>
 
         {/* Filter and Search Bar */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-zinc-800">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-zinc-200 dark:border-zinc-800">
           
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 p-1 rounded-2xl bg-zinc-900 border border-zinc-800">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 card-3d">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all ${
                   selectedCategory === cat
-                    ? 'bg-rose-500 text-white font-bold shadow-lg shadow-rose-500/20'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800'
+                    ? 'bg-rose-500 text-white font-bold btn-3d-primary'
+                    : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800'
                 }`}
               >
                 {cat}
@@ -264,13 +264,13 @@ export const ProjectsPage: React.FC = () => {
 
           {/* Search Box */}
           <div className="relative w-full lg:w-80">
-            <Search className="w-4 h-4 text-zinc-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-zinc-400 dark:text-zinc-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search by topic, model, or stack (e.g. PyTorch)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 text-xs rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder:text-zinc-500 focus:outline-none focus:border-rose-500 transition-colors font-mono"
+              className="w-full pl-10 pr-4 py-2.5 text-xs rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-rose-500 transition-colors font-mono pill-3d"
             />
           </div>
 
@@ -281,7 +281,7 @@ export const ProjectsPage: React.FC = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="rounded-3xl bg-[#09090c] border border-zinc-800 p-6 sm:p-7 flex flex-col justify-between hover:border-zinc-700 transition-all duration-300 group shadow-xl"
+              className="rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 p-6 sm:p-7 flex flex-col justify-between card-3d group"
             >
               <div>
                 {/* Visual Preview Box */}
@@ -294,11 +294,11 @@ export const ProjectsPage: React.FC = () => {
 
                 {/* Category & Status */}
                 <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="text-[11px] font-mono text-rose-300 bg-rose-500/10 px-2.5 py-0.5 rounded-full border border-rose-500/20 font-semibold">
+                  <span className="text-[11px] font-mono text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-500/10 px-2.5 py-0.5 rounded-full border border-rose-200 dark:border-rose-500/20 font-semibold pill-3d">
                     {project.category}
                   </span>
                   {project.isFYP && (
-                    <span className="text-[11px] font-mono text-blue-300 bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20 font-semibold">
+                    <span className="text-[11px] font-mono text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-500/20 font-semibold pill-3d">
                       ★ FYP Lead
                     </span>
                   )}
@@ -307,16 +307,16 @@ export const ProjectsPage: React.FC = () => {
                 {/* Title */}
                 <h2 
                   onClick={() => navigate(`#/project/${project.id}`)}
-                  className="text-xl sm:text-2xl font-display font-bold text-white group-hover:text-rose-300 transition-colors mb-1.5 cursor-pointer"
+                  className="text-xl sm:text-2xl font-display font-bold text-zinc-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-300 transition-colors mb-1.5 cursor-pointer"
                 >
                   {project.title}
                 </h2>
 
-                <p className="text-xs font-mono text-rose-400/90 mb-3">
+                <p className="text-xs font-mono text-rose-600 dark:text-rose-400/90 mb-3 font-semibold">
                   {project.subtitle}
                 </p>
 
-                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-6 font-sans">
+                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6 font-sans">
                   {project.overview}
                 </p>
 
@@ -325,7 +325,7 @@ export const ProjectsPage: React.FC = () => {
                   {project.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-zinc-900 text-zinc-300 border border-zinc-800"
+                      className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 pill-3d"
                     >
                       {tag}
                     </span>
@@ -334,11 +334,11 @@ export const ProjectsPage: React.FC = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-5 border-t border-zinc-800 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
+              <div className="pt-5 border-t border-zinc-200 dark:border-zinc-800 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
                 <div className="grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-3 flex-1">
                   <button
                     onClick={() => navigate(`#/project/${project.id}`)}
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-rose-500 hover:bg-rose-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-md shadow-rose-500/20 hover:scale-[1.02] text-center"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-rose-500 hover:bg-rose-600 dark:hover:bg-rose-400 text-white dark:text-slate-950 text-xs font-mono font-bold transition-all btn-3d-primary text-center"
                   >
                     <BookOpen className="w-4 h-4 shrink-0" />
                     <span>Open Full Case Study</span>
@@ -348,9 +348,9 @@ export const ProjectsPage: React.FC = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-100 hover:text-white border border-zinc-800 hover:border-rose-500/40 text-xs font-mono font-bold transition-all hover:scale-[1.02] text-center"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900/90 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-800 hover:border-rose-500/40 text-xs font-mono font-bold transition-all btn-3d-secondary text-center"
                   >
-                    <GithubIcon className="w-4 h-4 shrink-0 text-zinc-400" />
+                    <GithubIcon className="w-4 h-4 shrink-0 text-zinc-600 dark:text-zinc-400" />
                     <span>Source</span>
                   </a>
                 </div>
@@ -360,9 +360,9 @@ export const ProjectsPage: React.FC = () => {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white hover:bg-zinc-200 text-slate-950 text-xs font-mono font-bold transition-all shadow-md hover:scale-[1.02] text-center"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-slate-950 text-xs font-mono font-bold transition-all btn-3d-secondary text-center"
                   >
-                    <ExternalLink className="w-4 h-4 shrink-0 text-slate-950" />
+                    <ExternalLink className="w-4 h-4 shrink-0 text-white dark:text-slate-950" />
                     <span>{project.dagshubUrl ? 'DagsHub' : project.id === 'interactive-data-science-portfolio' ? 'Live Website' : 'Live Streamlit App'}</span>
                   </a>
                 )}
@@ -374,13 +374,13 @@ export const ProjectsPage: React.FC = () => {
 
         {/* Empty State */}
         {filteredProjects.length === 0 && (
-          <div className="text-center py-20 bg-[#09090c] rounded-3xl border border-zinc-800 p-8">
-            <Filter className="w-10 h-10 text-zinc-600 mx-auto mb-3" />
-            <h3 className="text-lg font-display font-bold text-white mb-1">No Projects Found</h3>
-            <p className="text-xs text-zinc-400 font-mono mb-4">No projects match "{searchQuery}" in category "{selectedCategory}".</p>
+          <div className="text-center py-20 bg-white dark:bg-[#09090c] rounded-3xl border border-zinc-200 dark:border-zinc-800 p-8 shadow-sm dark:shadow-none">
+            <Filter className="w-10 h-10 text-zinc-400 dark:text-zinc-600 mx-auto mb-3" />
+            <h3 className="text-lg font-display font-bold text-zinc-900 dark:text-white mb-1">No Projects Found</h3>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 font-mono mb-4">No projects match "{searchQuery}" in category "{selectedCategory}".</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="px-4 py-2 rounded-xl bg-zinc-800 text-xs font-mono text-zinc-200 hover:text-white"
+              className="px-4 py-2 rounded-xl bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 text-xs font-mono text-zinc-800 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white"
             >
               Reset Filters
             </button>

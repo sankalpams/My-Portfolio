@@ -327,27 +327,27 @@ export const ProjectDetailsPage: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen py-28 text-white">
+    <div className="relative min-h-screen py-28 text-zinc-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Breadcrumb Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-800/80">
-          <div className="flex items-center gap-2 font-mono text-xs text-zinc-400">
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-zinc-200 dark:border-zinc-800/80">
+          <div className="flex items-center gap-2 font-mono text-xs text-zinc-500 dark:text-zinc-400">
             <button
               onClick={() => navigate('#/')}
-              className="hover:text-white transition-colors"
+              className="hover:text-zinc-900 dark:hover:text-white transition-colors"
             >
               Home
             </button>
-            <ChevronRight className="w-3.5 h-3.5 text-zinc-600" />
+            <ChevronRight className="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-600" />
             <button
               onClick={() => navigate('#/projects')}
-              className="hover:text-white transition-colors"
+              className="hover:text-zinc-900 dark:hover:text-white transition-colors"
             >
               Projects
             </button>
-            <ChevronRight className="w-3.5 h-3.5 text-zinc-600" />
-            <span className="text-rose-300 font-semibold truncate max-w-[200px] sm:max-w-none">
+            <ChevronRight className="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-600" />
+            <span className="text-rose-600 dark:text-rose-300 font-semibold truncate max-w-[200px] sm:max-w-none">
               {project.shortTitle}
             </span>
           </div>
@@ -355,7 +355,7 @@ export const ProjectDetailsPage: React.FC = () => {
           <div className="flex items-center gap-3">
             <button
               onClick={() => navigate('#/projects')}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-xs font-mono text-zinc-300 hover:text-white transition-all"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 text-xs font-mono text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-all shadow-sm"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to All Projects</span>
@@ -371,38 +371,38 @@ export const ProjectDetailsPage: React.FC = () => {
         <div className="mb-12">
           
           <div className="flex flex-wrap items-center gap-2.5 mb-4">
-            <span className="px-3.5 py-1 rounded-full text-xs font-mono font-semibold bg-rose-500/15 text-rose-300 border border-rose-500/30">
+            <span className="px-3.5 py-1 rounded-full text-xs font-mono font-semibold bg-rose-50 dark:bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-500/30">
               {project.category}
             </span>
 
             {project.status && (
               <span className={`px-3.5 py-1 rounded-full text-xs font-mono font-semibold ${
                 project.status === 'In Progress'
-                  ? 'bg-amber-500/15 text-amber-300 border border-amber-500/30'
-                  : 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
+                  ? 'bg-amber-50 dark:bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-500/30'
+                  : 'bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30'
               }`}>
                 ● {project.status}
               </span>
             )}
 
             {project.isFYP && (
-              <span className="px-3.5 py-1 rounded-full text-xs font-mono font-semibold bg-blue-500/15 text-blue-300 border border-blue-500/30">
+              <span className="px-3.5 py-1 rounded-full text-xs font-mono font-semibold bg-blue-50 dark:bg-blue-500/15 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/30">
                 ★ Final Year Project (Lead)
               </span>
             )}
 
             {project.role && (
-              <span className="px-3.5 py-1 rounded-full text-xs font-mono text-zinc-400 bg-zinc-900 border border-zinc-800">
+              <span className="px-3.5 py-1 rounded-full text-xs font-mono text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
                 Role: {project.role}
               </span>
             )}
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white tracking-tight uppercase mb-3">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-zinc-900 dark:text-white tracking-tight uppercase mb-3">
             {project.title}
           </h1>
 
-          <p className="text-base sm:text-lg font-mono text-rose-400/90 max-w-3xl mb-8">
+          <p className="text-base sm:text-lg font-mono text-rose-600 dark:text-rose-400/90 max-w-3xl mb-8 font-semibold">
             {project.subtitle}
           </p>
 
@@ -412,11 +412,11 @@ export const ProjectDetailsPage: React.FC = () => {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-100 border border-zinc-700 hover:border-rose-500/50 text-xs font-mono font-bold transition-all shadow-md"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-700 hover:border-rose-500/50 text-xs font-mono font-bold transition-all btn-3d-secondary"
             >
-              <GithubIcon className="w-4 h-4 text-zinc-300" />
+              <GithubIcon className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
               <span>Inspect Source on GitHub</span>
-              <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
+              <ExternalLink className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
             </a>
 
             {project.liveUrl && (
@@ -424,7 +424,7 @@ export const ProjectDetailsPage: React.FC = () => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-zinc-200 text-slate-950 text-xs font-mono font-bold transition-all shadow-lg hover:scale-105"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-slate-950 text-xs font-mono font-bold transition-all btn-3d-primary"
               >
                 <span>{project.dagshubUrl ? 'View DagsHub MLOps Pipeline' : 'Launch Live Streamlit App'}</span>
                 <ExternalLink className="w-4 h-4" />
@@ -433,17 +433,17 @@ export const ProjectDetailsPage: React.FC = () => {
 
             <button
               onClick={() => navigate('#/contact')}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-900/60 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 text-xs font-mono font-medium transition-all"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900/60 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white border border-zinc-200 dark:border-zinc-800 text-xs font-mono font-medium transition-all btn-3d-secondary"
             >
               <span>Discuss This Project</span>
-              <ArrowRight className="w-3.5 h-3.5 text-rose-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400" />
             </button>
           </div>
 
         </div>
 
         {/* Project Custom Showcase Visual Banner */}
-        <div className="mb-14">
+        <div className="mb-14 card-3d rounded-3xl overflow-hidden">
           {getCustomProjectBanner()}
         </div>
 
@@ -451,25 +451,25 @@ export const ProjectDetailsPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-14">
           
           {/* Overview */}
-          <div className="lg:col-span-7 rounded-3xl bg-[#09090c] border border-zinc-800 p-6 sm:p-8 shadow-xl">
-            <h2 className="text-sm font-mono uppercase tracking-wider text-rose-400 mb-3 flex items-center gap-2">
+          <div className="lg:col-span-7 rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 card-3d">
+            <h2 className="text-sm font-mono uppercase tracking-wider text-rose-600 dark:text-rose-400 mb-3 flex items-center gap-2 font-bold">
               <Sparkles className="w-4 h-4" />
               Project Executive Summary
             </h2>
-            <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-sans mb-6">
+            <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed font-sans mb-6">
               {project.overview}
             </p>
 
-            <h3 className="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-3">
+            <h3 className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3 font-semibold">
               Key Engineering Innovations:
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {project.keyHighlights.map((hl, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800/80 text-xs text-zinc-300"
+                  className="flex items-center gap-2 p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800/80 text-xs text-zinc-800 dark:text-zinc-300 pill-3d"
                 >
-                  <CheckCircle2 className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400 shrink-0" />
                   <span>{hl}</span>
                 </div>
               ))}
@@ -477,22 +477,22 @@ export const ProjectDetailsPage: React.FC = () => {
           </div>
 
           {/* Metric Cards */}
-          <div className="lg:col-span-5 rounded-3xl bg-[#09090c] border border-zinc-800 p-6 sm:p-8 shadow-xl">
-            <h2 className="text-sm font-mono uppercase tracking-wider text-rose-400 mb-4 flex items-center gap-2">
+          <div className="lg:col-span-5 rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 card-3d">
+            <h2 className="text-sm font-mono uppercase tracking-wider text-rose-600 dark:text-rose-400 mb-4 flex items-center gap-2 font-bold">
               <BarChart3 className="w-4 h-4" />
-              Benchmark & Architecture Metrics
+              Benchmark &amp; Architecture Metrics
             </h2>
 
             <div className="grid grid-cols-2 gap-3.5">
               {project.metrics?.map((metric, idx) => (
                 <div
                   key={idx}
-                  className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800"
+                  className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 card-3d"
                 >
-                  <div className="text-[11px] font-mono text-zinc-400">
+                  <div className="text-[11px] font-mono text-zinc-500 dark:text-zinc-400">
                     {metric.label}
                   </div>
-                  <div className="text-base sm:text-lg font-display font-extrabold text-rose-300 my-0.5">
+                  <div className="text-base sm:text-lg font-display font-extrabold text-rose-600 dark:text-rose-300 my-0.5">
                     {metric.value}
                   </div>
                   {metric.subtext && (
@@ -509,11 +509,11 @@ export const ProjectDetailsPage: React.FC = () => {
 
         {/* Technical Architecture Layer Breakdown */}
         {project.architecture && (
-          <div className="rounded-3xl bg-[#09090c] border border-zinc-800 p-6 sm:p-8 shadow-xl mb-14">
-            <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-800">
-              <div className="flex items-center gap-2 text-white font-display font-bold text-lg">
-                <Layers className="w-5 h-5 text-rose-400" />
-                <span>Technical Architecture & Layer Breakdown</span>
+          <div className="rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 card-3d mb-14">
+            <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 dark:border-zinc-800">
+              <div className="flex items-center gap-2 text-zinc-900 dark:text-white font-display font-bold text-lg">
+                <Layers className="w-5 h-5 text-rose-500 dark:text-rose-400" />
+                <span>Technical Architecture &amp; Layer Breakdown</span>
               </div>
               <span className="text-xs font-mono text-zinc-500">
                 {project.architecture.length} System Layers
@@ -524,24 +524,24 @@ export const ProjectDetailsPage: React.FC = () => {
               {project.architecture.map((layer, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-zinc-700 transition-colors"
+                  className="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors card-3d"
                 >
                   <div className="space-y-1">
                     <div className="flex items-center gap-2.5">
-                      <span className="w-6 h-6 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 font-mono text-xs flex items-center justify-center font-bold">
+                      <span className="w-6 h-6 rounded-lg bg-rose-50 dark:bg-rose-500/20 border border-rose-200 dark:border-rose-500/40 text-rose-600 dark:text-rose-300 font-mono text-xs flex items-center justify-center font-bold">
                         {idx + 1}
                       </span>
-                      <h4 className="font-display font-bold text-base text-white">
+                      <h4 className="font-display font-bold text-base text-zinc-900 dark:text-white">
                         {layer.layer}
                       </h4>
                     </div>
-                    <p className="text-xs sm:text-sm text-zinc-300 pl-8.5">
+                    <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 pl-8.5">
                       {layer.responsibility}
                     </p>
                   </div>
 
                   <div className="shrink-0 pl-8.5 md:pl-0">
-                    <span className="inline-block text-xs font-mono font-semibold px-3 py-1.5 rounded-xl bg-zinc-800 text-rose-300 border border-zinc-700">
+                    <span className="inline-block text-xs font-mono font-semibold px-3 py-1.5 rounded-xl bg-zinc-200/70 dark:bg-zinc-800 text-rose-700 dark:text-rose-300 border border-zinc-300 dark:border-zinc-700 pill-3d">
                       {layer.technology}
                     </span>
                   </div>
@@ -552,39 +552,37 @@ export const ProjectDetailsPage: React.FC = () => {
         )}
 
         {/* Deep Engineering Methodologies & Implementation Details */}
-        <div className="rounded-3xl bg-[#09090c] border border-zinc-800 p-6 sm:p-8 shadow-xl mb-14">
-          <h2 className="text-sm font-mono uppercase tracking-wider text-rose-400 mb-4 flex items-center gap-2">
+        <div className="rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 shadow-sm dark:shadow-xl mb-14">
+          <h2 className="text-sm font-mono uppercase tracking-wider text-rose-600 dark:text-rose-400 mb-4 flex items-center gap-2 font-bold">
             <CheckCircle2 className="w-4 h-4" />
-            Detailed Engineering Responsibilities & Methodological Rigor
+            Detailed Engineering Responsibilities &amp; Methodological Rigor
           </h2>
 
           <div className="space-y-3.5">
             {project.bullets.map((bullet, idx) => (
               <div
                 key={idx}
-                className="flex items-start gap-3.5 p-3.5 rounded-xl bg-zinc-900/50 border border-zinc-800/80 text-xs sm:text-sm text-zinc-300 leading-relaxed"
+                className="flex items-start gap-3.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed"
               >
-                <div className="w-2 h-2 rounded-full bg-rose-400 mt-2 shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-rose-500 dark:bg-rose-400 mt-2 shrink-0" />
                 <span>{bullet}</span>
               </div>
             ))}
           </div>
         </div>
 
-
-
         {/* Technologies & Frameworks */}
-        <div className="rounded-3xl bg-[#09090c] border border-zinc-800 p-6 sm:p-8 shadow-xl mb-14">
-          <h2 className="text-sm font-mono uppercase tracking-wider text-zinc-400 mb-4 flex items-center gap-2">
-            <Cpu className="w-4 h-4 text-rose-400" />
-            Technologies, Frameworks & Tooling
+        <div className="rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 shadow-sm dark:shadow-xl mb-14">
+          <h2 className="text-sm font-mono uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-4 flex items-center gap-2 font-bold">
+            <Cpu className="w-4 h-4 text-rose-500 dark:text-rose-400" />
+            Technologies, Frameworks &amp; Tooling
           </h2>
 
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-zinc-900 text-zinc-200 border border-zinc-800 hover:border-rose-500/40 transition-colors"
+                className="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 hover:border-rose-500/40 transition-colors"
               >
                 {tag}
               </span>
@@ -593,20 +591,20 @@ export const ProjectDetailsPage: React.FC = () => {
         </div>
 
         {/* Previous & Next Project Navigation Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-zinc-800/80 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-zinc-200 dark:border-zinc-800/80 mb-12">
           {/* Previous */}
           <button
             onClick={() => navigate(`#/project/${prevProject.id}`)}
-            className="rounded-3xl bg-[#09090c] border border-zinc-800 p-6 flex flex-col items-start justify-between text-left hover:border-rose-500/40 transition-all group"
+            className="rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 p-6 flex flex-col items-start justify-between text-left hover:border-rose-500/40 transition-all shadow-sm dark:shadow-none group"
           >
             <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 mb-2">
-              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform text-rose-400" />
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform text-rose-500 dark:text-rose-400" />
               <span>PREVIOUS CASE STUDY</span>
             </div>
-            <div className="font-display font-bold text-lg text-white group-hover:text-rose-300 transition-colors">
+            <div className="font-display font-bold text-lg text-zinc-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-300 transition-colors">
               {prevProject.title}
             </div>
-            <div className="text-xs font-mono text-zinc-400 mt-1">
+            <div className="text-xs font-mono text-zinc-500 dark:text-zinc-400 mt-1">
               {prevProject.category}
             </div>
           </button>
@@ -614,16 +612,16 @@ export const ProjectDetailsPage: React.FC = () => {
           {/* Next */}
           <button
             onClick={() => navigate(`#/project/${nextProject.id}`)}
-            className="rounded-3xl bg-[#09090c] border border-zinc-800 p-6 flex flex-col items-end justify-between text-right hover:border-rose-500/40 transition-all group"
+            className="rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 p-6 flex flex-col items-end justify-between text-right hover:border-rose-500/40 transition-all shadow-sm dark:shadow-none group"
           >
             <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 mb-2">
               <span>NEXT CASE STUDY</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-rose-400" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-rose-500 dark:text-rose-400" />
             </div>
-            <div className="font-display font-bold text-lg text-white group-hover:text-rose-300 transition-colors">
+            <div className="font-display font-bold text-lg text-zinc-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-300 transition-colors">
               {nextProject.title}
             </div>
-            <div className="text-xs font-mono text-zinc-400 mt-1">
+            <div className="text-xs font-mono text-zinc-500 dark:text-zinc-400 mt-1">
               {nextProject.category}
             </div>
           </button>

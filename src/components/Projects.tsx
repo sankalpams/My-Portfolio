@@ -198,10 +198,10 @@ export const Projects: React.FC = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white dark:text-white tracking-tight uppercase">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-zinc-900 dark:text-white tracking-tight uppercase">
             MY PROJECTS &amp; CONTRIBUTIONS
           </h2>
-          <div className="w-12 h-1 bg-rose-400 rounded-full mt-3" />
+          <div className="w-12 h-1 bg-rose-500 rounded-full mt-3" />
         </div>
 
         {/* 2-Column Grid */}
@@ -209,7 +209,7 @@ export const Projects: React.FC = () => {
           {displayedProjects.map((project) => (
             <div
               key={project.id}
-              className="rounded-3xl bg-[#09090c] dark:bg-[#09090c] border border-zinc-800/90 dark:border-zinc-800/90 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 group hover:border-zinc-700 hover:shadow-2xl shadow-black/40"
+              className="rounded-3xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800/90 p-6 sm:p-7 flex flex-col justify-between card-3d group"
             >
               <div>
                 {/* Visual Preview Box */}
@@ -223,16 +223,16 @@ export const Projects: React.FC = () => {
                 {/* Title & Subtitle */}
                 <h3 
                   onClick={() => navigate(`#/project/${project.id}`)}
-                  className="text-xl sm:text-2xl font-display font-bold text-white dark:text-white group-hover:text-rose-300 transition-colors mb-1.5 cursor-pointer"
+                  className="text-xl sm:text-2xl font-display font-bold text-zinc-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-300 transition-colors mb-1.5 cursor-pointer"
                 >
                   {project.title}
                 </h3>
                 
-                <p className="text-xs font-mono text-rose-400/90 mb-3">
+                <p className="text-xs font-mono text-rose-600 dark:text-rose-400/90 mb-3 font-semibold">
                   {project.subtitle}
                 </p>
 
-                <p className="text-xs sm:text-sm text-zinc-400 dark:text-zinc-400 leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
                   {project.overview}
                 </p>
 
@@ -241,7 +241,7 @@ export const Projects: React.FC = () => {
                   {project.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-zinc-900 dark:bg-zinc-900 text-zinc-300 dark:text-zinc-300 border border-zinc-800"
+                      className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 pill-3d"
                     >
                       {tag}
                     </span>
@@ -250,11 +250,11 @@ export const Projects: React.FC = () => {
               </div>
 
               {/* Action Buttons Row */}
-              <div className="pt-5 border-t border-zinc-800/80 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
+              <div className="pt-5 border-t border-zinc-200 dark:border-zinc-800/80 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
                 <div className="grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-3 flex-1">
                   <button
                     onClick={() => navigate(`#/project/${project.id}`)}
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-rose-500 hover:bg-rose-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-md shadow-rose-500/20 hover:scale-[1.02] text-center"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-rose-500 hover:bg-rose-600 dark:hover:bg-rose-400 text-white dark:text-slate-950 text-xs font-mono font-bold transition-all btn-3d-primary text-center"
                   >
                     <BookOpen className="w-4 h-4 shrink-0" />
                     <span>Open Full Case Study</span>
@@ -264,9 +264,9 @@ export const Projects: React.FC = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-100 hover:text-white border border-zinc-800 hover:border-rose-500/40 text-xs font-mono font-bold transition-all hover:scale-[1.02] text-center"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 dark:bg-zinc-900/90 dark:hover:bg-zinc-800 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-800 hover:border-rose-500/40 text-xs font-mono font-bold transition-all btn-3d-secondary text-center"
                   >
-                    <GithubIcon className="w-4 h-4 shrink-0 text-zinc-400" />
+                    <GithubIcon className="w-4 h-4 shrink-0 text-zinc-600 dark:text-zinc-400" />
                     <span>Source</span>
                   </a>
                 </div>
@@ -276,9 +276,9 @@ export const Projects: React.FC = () => {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white hover:bg-zinc-200 text-slate-950 text-xs font-mono font-bold transition-all shadow-md hover:scale-[1.02] text-center"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-slate-950 text-xs font-mono font-bold transition-all btn-3d-secondary text-center"
                   >
-                    <ExternalLink className="w-4 h-4 shrink-0 text-slate-950" />
+                    <ExternalLink className="w-4 h-4 shrink-0 text-white dark:text-slate-950" />
                     <span>{project.dagshubUrl ? 'DagsHub' : project.id === 'interactive-data-science-portfolio' ? 'Live Website' : 'Live Streamlit App'}</span>
                   </a>
                 )}
@@ -292,7 +292,7 @@ export const Projects: React.FC = () => {
         <div className="mt-12 text-center">
           <button
             onClick={() => navigate('#/projects')}
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-rose-500/40 text-xs font-mono text-rose-300 font-bold tracking-wider uppercase transition-all shadow-lg hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white hover:bg-zinc-100 border border-zinc-300 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:border-zinc-800 hover:border-rose-500/40 text-xs font-mono text-rose-600 dark:text-rose-300 font-bold tracking-wider uppercase transition-all btn-3d-secondary"
           >
             <span>Explore My Projects &amp; Contributions</span>
             <ArrowRight className="w-4 h-4" />
