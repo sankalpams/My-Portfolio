@@ -67,81 +67,81 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           <div className="lg:col-span-6 flex flex-col items-start text-left z-20">
             
             {/* Top Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/90 dark:bg-zinc-900/90 border border-zinc-800 dark:border-zinc-800 text-zinc-300 dark:text-zinc-300 text-[10px] sm:text-[11px] font-mono tracking-widest uppercase mb-4 sm:mb-6 shadow-sm">
-              <span>DATA SCIENCE & MACHINE LEARNING</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-[10px] sm:text-[11px] font-mono tracking-widest uppercase mb-4 sm:mb-6 pill-3d">
+              <span>DATA SCIENCE &amp; MACHINE LEARNING</span>
             </div>
 
             {/* Giant Bold Dual-Line Title */}
             <div className="mb-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-black tracking-tight uppercase leading-[0.95] text-white dark:text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-black tracking-tight uppercase leading-[0.95] text-zinc-900 dark:text-white">
                 MALITH
               </h1>
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-black tracking-tight uppercase leading-[0.95] bg-clip-text text-transparent bg-gradient-to-r from-rose-200 via-rose-300 to-pink-300 dark:from-rose-200 dark:via-rose-300 dark:to-pink-300">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-black tracking-tight uppercase leading-[0.95] bg-clip-text text-transparent bg-gradient-to-r from-rose-600 via-pink-600 to-rose-700 dark:from-rose-200 dark:via-rose-300 dark:to-pink-300">
                 SANKALPA
               </h1>
             </div>
 
             {/* Dynamic Typewriter Animated Subtitle */}
-            <div className="h-8 flex items-center gap-2 font-mono text-sm sm:text-base text-rose-300 dark:text-rose-300 font-semibold mb-4">
+            <div className="h-8 flex items-center gap-2 font-mono text-sm sm:text-base text-rose-600 dark:text-rose-300 font-semibold mb-4">
               <span>&gt; {currentText}</span>
-              <span className="w-2 h-5 bg-rose-400 animate-blink inline-block" />
+              <span className="w-2 h-5 bg-rose-500 animate-blink inline-block" />
             </div>
 
             {/* Bio Paragraph */}
-            <p className="text-sm sm:text-base text-zinc-400 dark:text-zinc-400 leading-relaxed max-w-xl mb-6 font-normal">
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-xl mb-6 font-normal">
               {personalInfo.bio}
             </p>
 
             {/* Availability Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-8">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-mono mb-8 pill-3d">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>Open to Opportunities</span>
             </div>
 
             {/* Tabular Metadata Grid (Sanket Chaudhari Style) */}
-            <div className="w-full border-t border-zinc-800/80 dark:border-zinc-800/80 divide-y divide-zinc-900 dark:divide-zinc-900 text-xs font-mono">
+            <div className="w-full border-t border-zinc-200 dark:border-zinc-800/80 divide-y divide-zinc-200 dark:divide-zinc-900 text-xs font-mono">
               
               {/* Education */}
               <div className="py-3 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-                <div className="sm:col-span-4 text-zinc-500 uppercase flex items-center gap-1.5">
-                  <GraduationCap className="w-3.5 h-3.5 text-zinc-400" />
+                <div className="sm:col-span-4 text-zinc-500 dark:text-zinc-400 uppercase flex items-center gap-1.5 font-medium">
+                  <GraduationCap className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
                   <span>EDUCATION</span>
                 </div>
-                <div className="sm:col-span-8 text-zinc-200 dark:text-zinc-200 font-medium">
-                  <span className="font-semibold">{personalInfo.degree}</span>
-                  <div className="text-zinc-400 text-[11px]">{personalInfo.university}</div>
+                <div className="sm:col-span-8 text-zinc-800 dark:text-zinc-200 font-medium">
+                  <span className="font-semibold text-zinc-900 dark:text-white">{personalInfo.degree}</span>
+                  <div className="text-zinc-500 dark:text-zinc-400 text-[11px]">{personalInfo.university}</div>
                 </div>
               </div>
 
               {/* Status / Year */}
               <div className="py-3 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-                <div className="sm:col-span-4 text-zinc-500 uppercase flex items-center gap-1.5">
-                  <Cpu className="w-3.5 h-3.5 text-zinc-400" />
+                <div className="sm:col-span-4 text-zinc-500 dark:text-zinc-400 uppercase flex items-center gap-1.5 font-medium">
+                  <Cpu className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
                   <span>ACADEMIC STATUS</span>
                 </div>
-                <div className="sm:col-span-8 text-zinc-200 dark:text-zinc-200 font-semibold">
+                <div className="sm:col-span-8 text-zinc-800 dark:text-zinc-200 font-semibold">
                   {personalInfo.batch}
                 </div>
               </div>
 
               {/* Languages & Stack */}
               <div className="py-3 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-                <div className="sm:col-span-4 text-zinc-500 uppercase flex items-center gap-1.5">
-                  <Code2 className="w-3.5 h-3.5 text-zinc-400" />
+                <div className="sm:col-span-4 text-zinc-500 dark:text-zinc-400 uppercase flex items-center gap-1.5 font-medium">
+                  <Code2 className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
                   <span>LANGUAGES</span>
                 </div>
-                <div className="sm:col-span-8 text-zinc-200 dark:text-zinc-200">
+                <div className="sm:col-span-8 text-zinc-700 dark:text-zinc-300">
                   Python • R • JavaScript • HTML/CSS • Java • C • C++ • C# • SQL • Dart
                 </div>
               </div>
 
               {/* Location */}
               <div className="py-3 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-                <div className="sm:col-span-4 text-zinc-500 uppercase flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-zinc-400" />
+                <div className="sm:col-span-4 text-zinc-500 dark:text-zinc-400 uppercase flex items-center gap-1.5 font-medium">
+                  <MapPin className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
                   <span>LOCATION</span>
                 </div>
-                <div className="sm:col-span-8 text-zinc-200 dark:text-zinc-200">
+                <div className="sm:col-span-8 text-zinc-700 dark:text-zinc-300">
                   {personalInfo.location}
                 </div>
               </div>
@@ -152,7 +152,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             <div className="mt-8 flex flex-wrap gap-4">
               <button
                 onClick={() => navigate('#/projects')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-zinc-200 text-slate-950 font-display font-bold text-xs uppercase tracking-wider transition-all hover:scale-105 shadow-lg shadow-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-slate-950 font-display font-bold text-xs uppercase tracking-wider transition-all hover:scale-105 btn-3d-primary"
               >
                 <span>View Projects</span>
                 <ArrowRight className="w-4 h-4" />
@@ -160,9 +160,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
               <button
                 onClick={handleResumeClick}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-display font-bold text-xs uppercase tracking-wider transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-zinc-100 text-zinc-800 border border-zinc-300 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-200 dark:border-zinc-700 font-display font-bold text-xs uppercase tracking-wider transition-all hover:scale-105 btn-3d-secondary"
               >
-                <FileText className="w-4 h-4 text-rose-400" />
+                <FileText className="w-4 h-4 text-rose-500" />
                 <span>Resume PDF</span>
               </button>
             </div>
@@ -185,7 +185,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   <img 
                     src="/malith_cutout.png" 
                     alt="Malith Shehan Sankalpa" 
-                    className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[580px] xl:w-[680px] max-w-full h-auto object-contain drop-shadow-[0_35px_80px_rgba(244,63,94,0.35)] sm:group-hover:scale-105 transition-all duration-500"
+                    className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[580px] xl:w-[680px] max-w-full h-auto object-contain drop-shadow-[0_20px_45px_rgba(0,0,0,0.18)] dark:drop-shadow-[0_35px_80px_rgba(244,63,94,0.35)] sm:group-hover:scale-105 transition-all duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = '/malith_photo.jpg';
                     }}

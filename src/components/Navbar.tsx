@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, FileText, ArrowLeft } from 'lucide-react';
 import { useRouter } from '../router/RouterContext';
+import { ThemeToggle } from './ThemeToggle';
 
 export const Navbar: React.FC = () => {
   const { route, navigate } = useRouter();
@@ -43,7 +44,7 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled || !isHome
-          ? 'py-3.5 bg-black/85 backdrop-blur-md border-b border-white/10'
+          ? 'py-3.5 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800/80 shadow-3d-nav'
           : 'py-5 bg-transparent'
       }`}
     >
@@ -55,16 +56,16 @@ export const Navbar: React.FC = () => {
             onClick={() => navigate('#/')}
             className="flex items-center gap-2.5 focus:outline-none group text-left"
           >
-            <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-700 overflow-hidden flex items-center justify-center group-hover:border-rose-500/50 group-hover:scale-105 transition-all shadow-sm">
+            <div className="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 overflow-hidden flex items-center justify-center group-hover:border-rose-500/50 group-hover:scale-105 transition-all pill-3d">
               <img src="/favicon.png" alt="MS Logo" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-extrabold tracking-widest text-xs sm:text-sm text-white group-hover:text-rose-300 transition-colors uppercase truncate">
+              <span className="font-display font-extrabold tracking-widest text-xs sm:text-sm text-zinc-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-300 transition-colors uppercase truncate">
                 MALITH.SANKALPA
               </span>
               {!isHome && (
-                <span className="text-[10px] font-mono text-zinc-500 flex items-center gap-1">
-                  <ArrowLeft className="w-2.5 h-2.5 text-rose-400" /> Return to Home
+                <span className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 flex items-center gap-1">
+                  <ArrowLeft className="w-2.5 h-2.5 text-rose-500" /> Return to Home
                 </span>
               )}
             </div>
@@ -84,14 +85,14 @@ export const Navbar: React.FC = () => {
                   onClick={() => handleLinkClick(link.target)}
                   className={`flex items-center gap-1.5 transition-colors relative py-1 ${
                     isCurrentRoute
-                      ? 'text-white font-semibold'
-                      : 'text-zinc-400 hover:text-zinc-200'
+                      ? 'text-zinc-900 dark:text-white font-semibold'
+                      : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
                   }`}
                 >
-                  <span className="text-[10px] text-zinc-500 font-normal">{link.num}</span>
+                  <span className="text-[10px] text-zinc-400 dark:text-zinc-500 font-normal">{link.num}</span>
                   <span>{link.name}</span>
                   {isCurrentRoute && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-rose-400 rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-rose-500 rounded-full" />
                   )}
                 </button>
               );
@@ -99,18 +100,21 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Right Action Icons */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+
+            {/* Theme Toggle Button */}
+            <ThemeToggle />
 
             {/* Resume Button */}
             <button
               onClick={() => navigate('#/resume')}
               className={`hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border text-xs font-mono font-medium transition-all ${
                 route.pathname === '/resume'
-                  ? 'bg-rose-500 text-white font-bold border-rose-500 shadow-md'
-                  : 'bg-zinc-900 hover:bg-zinc-800 border-zinc-800 text-zinc-200 hover:border-rose-500/40'
+                  ? 'bg-rose-500 text-white font-bold border-rose-500 btn-3d-primary'
+                  : 'bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 border-zinc-200 dark:border-zinc-800 text-zinc-800 dark:text-zinc-200 hover:border-rose-500/40 btn-3d-secondary'
               }`}
             >
-              <FileText className="w-3.5 h-3.5 text-rose-400" />
+              <FileText className="w-3.5 h-3.5 text-rose-500" />
               <span>Resume (CV)</span>
             </button>
 
@@ -118,7 +122,7 @@ export const Navbar: React.FC = () => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle mobile menu"
-              className="lg:hidden p-2 rounded-xl border border-zinc-800 bg-zinc-900 text-zinc-300"
+              className="lg:hidden p-2 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 pill-3d"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -130,27 +134,32 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-black/95 backdrop-blur-xl border-b border-zinc-800 p-6 shadow-2xl animate-fadeIn">
+        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-white/95 dark:bg-black/95 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800 p-6 shadow-2xl animate-fadeIn">
           <div className="flex flex-col gap-3 font-mono text-xs">
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => handleLinkClick(link.target)}
-                className="flex items-center justify-between p-3 rounded-xl bg-zinc-900/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-colors text-left"
+                className="flex items-center justify-between p-3 rounded-xl bg-zinc-100/80 dark:bg-zinc-900/60 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors text-left"
               >
                 <span>{link.num} {link.name}</span>
               </button>
             ))}
 
-            <div className="pt-3 border-t border-zinc-800">
+            <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800 flex flex-col gap-2.5">
+              <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                <span className="text-xs text-zinc-500 dark:text-zinc-400 pl-2">Color Theme:</span>
+                <ThemeToggle showLabel />
+              </div>
+
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   navigate('#/resume');
                 }}
-                className="w-full p-3 rounded-xl bg-zinc-900 text-zinc-200 font-medium flex items-center justify-center gap-2 border border-zinc-800 hover:bg-zinc-800 hover:text-white transition-colors"
+                className="w-full p-3 rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium flex items-center justify-center gap-2 border border-zinc-800 dark:border-zinc-200 hover:opacity-90 transition-opacity"
               >
-                <FileText className="w-4 h-4 text-rose-400" />
+                <FileText className="w-4 h-4 text-rose-400 dark:text-rose-500" />
                 <span>Resume (CV)</span>
               </button>
             </div>
