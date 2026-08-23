@@ -8,6 +8,22 @@ export default {
   theme: {
     extend: {
       colors: {
+        background: 'var(--bg-primary)',
+        foreground: 'var(--text-primary)',
+        card: {
+          DEFAULT: 'var(--bg-card)',
+          foreground: 'var(--text-primary)',
+          border: 'var(--border-card)',
+        },
+        surface: {
+          DEFAULT: 'var(--bg-surface)',
+          secondary: 'var(--bg-secondary)',
+        },
+        border: 'var(--border)',
+        muted: {
+          DEFAULT: 'var(--bg-secondary)',
+          foreground: 'var(--text-muted)',
+        },
         dark: {
           bg: '#000000',
           surface: '#08080a',
@@ -22,6 +38,15 @@ export default {
           teal: '#14b8a6',
           violet: '#a855f7',
         }
+      },
+      boxShadow: {
+        '3d-card': '0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px -4px rgba(0, 0, 0, 0.08), 0 16px 36px -8px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.05)',
+        '3d-hover': '0 2px 4px rgba(0, 0, 0, 0.04), 0 14px 32px -4px rgba(0, 0, 0, 0.12), 0 28px 56px -10px rgba(0, 0, 0, 0.09), 0 0 0 1px rgba(244, 63, 94, 0.25)',
+        '3d-pill': '0 2px 6px -1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.04)',
+        '3d-nav': '0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.05)',
+        '3d-button': '0 4px 14px 0 rgba(244, 63, 94, 0.35), 0 2px 4px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+        '3d-dark-card': '0 1px 2px rgba(0, 0, 0, 0.6), 0 8px 24px -4px rgba(0, 0, 0, 0.8), 0 20px 40px -10px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.08)',
+        '3d-dark-hover': '0 2px 4px rgba(0, 0, 0, 0.6), 0 14px 36px -4px rgba(0, 0, 0, 0.9), 0 28px 60px -10px rgba(0, 0, 0, 0.95), 0 0 20px -2px rgba(244, 63, 94, 0.2), 0 0 0 1px rgba(244, 63, 94, 0.4)',
       },
       fontFamily: {
         sans: ['"Poppins"', 'system-ui', '-apple-system', 'sans-serif'],
