@@ -47,14 +47,14 @@ export const SkillsMarquee: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 relative overflow-hidden bg-black/60">
+    <section id="skills" className="py-20 relative overflow-hidden bg-zinc-100/60 dark:bg-black/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
         
         {/* Section Header */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white dark:text-white tracking-tight uppercase">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-zinc-900 dark:text-white tracking-tight uppercase">
           MY SKILLS
         </h2>
-        <div className="w-12 h-1 bg-rose-400 rounded-full mx-auto mt-3" />
+        <div className="w-12 h-1 bg-rose-500 rounded-full mx-auto mt-3" />
       </div>
 
       {/* Marquee Container */}
@@ -66,7 +66,7 @@ export const SkillsMarquee: React.FC = () => {
             {row1.map((skill, idx) => (
               <div
                 key={`r1-a-${idx}`}
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#0d0d12] border border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-200 shadow-sm shrink-0 hover:scale-105 transition-transform cursor-default"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white dark:bg-[#0d0d12] border border-zinc-200 dark:border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-800 dark:text-zinc-200 pill-3d shrink-0 hover:scale-105 transition-transform cursor-default"
               >
                 <span className="text-sm">{skill.icon}</span>
                 <span>{skill.name}</span>
@@ -78,7 +78,7 @@ export const SkillsMarquee: React.FC = () => {
             {row1.map((skill, idx) => (
               <div
                 key={`r1-b-${idx}`}
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#0d0d12] border border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-200 shadow-sm shrink-0 hover:scale-105 transition-transform cursor-default"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white dark:bg-[#0d0d12] border border-zinc-200 dark:border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-800 dark:text-zinc-200 pill-3d shrink-0 hover:scale-105 transition-transform cursor-default"
               >
                 <span className="text-sm">{skill.icon}</span>
                 <span>{skill.name}</span>
@@ -93,7 +93,7 @@ export const SkillsMarquee: React.FC = () => {
             {row2.map((skill, idx) => (
               <div
                 key={`r2-a-${idx}`}
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#0d0d12] border border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-200 shadow-sm shrink-0 hover:scale-105 transition-transform cursor-default"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white dark:bg-[#0d0d12] border border-zinc-200 dark:border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-800 dark:text-zinc-200 pill-3d shrink-0 hover:scale-105 transition-transform cursor-default"
               >
                 <span className="text-sm">{skill.icon}</span>
                 <span>{skill.name}</span>
@@ -105,7 +105,7 @@ export const SkillsMarquee: React.FC = () => {
             {row2.map((skill, idx) => (
               <div
                 key={`r2-b-${idx}`}
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#0d0d12] border border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-200 shadow-sm shrink-0 hover:scale-105 transition-transform cursor-default"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white dark:bg-[#0d0d12] border border-zinc-200 dark:border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-800 dark:text-zinc-200 pill-3d shrink-0 hover:scale-105 transition-transform cursor-default"
               >
                 <span className="text-sm">{skill.icon}</span>
                 <span>{skill.name}</span>
@@ -120,7 +120,7 @@ export const SkillsMarquee: React.FC = () => {
             {row3.map((skill, idx) => (
               <div
                 key={`r3-a-${idx}`}
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#0d0d12] border border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-200 shadow-sm shrink-0 hover:scale-105 transition-transform cursor-default"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white dark:bg-[#0d0d12] border border-zinc-200 dark:border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-800 dark:text-zinc-200 pill-3d shrink-0 hover:scale-105 transition-transform cursor-default"
               >
                 <span className="text-sm">{skill.icon}</span>
                 <span>{skill.name}</span>
@@ -132,7 +132,7 @@ export const SkillsMarquee: React.FC = () => {
             {row3.map((skill, idx) => (
               <div
                 key={`r3-b-${idx}`}
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#0d0d12] border border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-200 shadow-sm shrink-0 hover:scale-105 transition-transform cursor-default"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white dark:bg-[#0d0d12] border border-zinc-200 dark:border-zinc-800/90 hover:border-rose-500/40 text-xs font-mono font-medium text-zinc-800 dark:text-zinc-200 pill-3d shrink-0 hover:scale-105 transition-transform cursor-default"
               >
                 <span className="text-sm">{skill.icon}</span>
                 <span>{skill.name}</span>

@@ -234,28 +234,28 @@ export const TerminalPage: React.FC = () => {
   const quickPills = ['help', 'about', 'projects', 'skills', 'certifications', 'resume', 'contact', 'clear'];
 
   return (
-    <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 text-white">
+    <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 text-zinc-900 dark:text-white">
       <div className="max-w-5xl mx-auto">
         
-        {/* Top Header */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-6 border-b border-zinc-800">
+        {/* Top Controls */}
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-6 border-b border-zinc-200 dark:border-zinc-800">
           <button
             onClick={() => navigate('#/')}
-            className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-rose-400 transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono text-zinc-500 dark:text-zinc-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Home Overview</span>
           </button>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-500/20 flex items-center gap-1.5 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>Shell Interactive</span>
             </span>
 
             <button
               onClick={() => setHistory([])}
-              className="p-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-white text-xs font-mono transition-colors"
+              className="p-2 rounded-xl bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white text-xs font-mono transition-colors shadow-sm"
               title="Clear Terminal Output"
             >
               <Trash2 className="w-4 h-4" />
@@ -266,14 +266,14 @@ export const TerminalPage: React.FC = () => {
         {/* Quick Command Chips */}
         <div className="flex flex-wrap items-center gap-2 mb-6">
           <span className="text-[11px] font-mono text-zinc-500 uppercase flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-rose-400" />
+            <Sparkles className="w-3 h-3 text-rose-500 dark:text-rose-400" />
             Quick Commands:
           </span>
           {quickPills.map(p => (
             <button
               key={p}
               onClick={() => executeCommandString(p)}
-              className="px-3 py-1 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-rose-300 text-xs font-mono transition-colors"
+              className="px-3 py-1 rounded-lg bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 text-zinc-800 dark:text-zinc-300 hover:text-rose-600 dark:hover:text-rose-300 text-xs font-mono transition-colors shadow-sm"
             >
               ${p}
             </button>
@@ -281,7 +281,7 @@ export const TerminalPage: React.FC = () => {
         </div>
 
         {/* Terminal Window Box */}
-        <div className="rounded-3xl bg-[#09090c] border border-zinc-800 shadow-2xl overflow-hidden flex flex-col min-h-[650px] font-mono text-sm">
+        <div className="rounded-3xl bg-[#09090c] border border-zinc-300 dark:border-zinc-800 shadow-2xl overflow-hidden flex flex-col min-h-[650px] font-mono text-sm">
           
           {/* Window Titlebar */}
           <div className="flex items-center justify-between px-5 py-3.5 bg-[#0d0d12] border-b border-zinc-800">

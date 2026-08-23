@@ -7,11 +7,11 @@ export const ContactPage: React.FC = () => {
   const { navigate } = useRouter();
 
   return (
-    <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 text-white">
+    <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 text-zinc-900 dark:text-white">
       <div className="max-w-7xl mx-auto">
         <button
           onClick={() => navigate('#/')}
-          className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-rose-400 transition-colors mb-4"
+          className="inline-flex items-center gap-2 text-xs font-mono text-zinc-500 dark:text-zinc-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors mb-4"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home Overview</span>
