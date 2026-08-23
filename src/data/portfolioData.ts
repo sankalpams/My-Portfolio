@@ -288,29 +288,15 @@ export const educationTimeline: EducationItem[] = [
     ]
   },
   {
-    id: 'esoft-dit',
-    degree: 'Diploma in Information Technology (DIT)',
+    id: 'esoft-diplomas',
+    degree: 'Diplomas in Information Technology (DIT) & English',
     institution: 'ESOFT Metro Campus',
     period: '2022 – 2023',
     location: 'Sri Lanka',
-    summary: 'Foundational computing curriculum covering software engineering paradigms, relational database design, object-oriented programming, and computer network architecture.',
+    summary: 'Dual professional diploma qualifications combining foundational software engineering paradigms, database design, and systems analysis with advanced technical writing and formal communication.',
     courseworkOrHighlights: [
-      'Relational Database Management Systems (SQL Server, MySQL)',
-      'Object-Oriented Programming (Java, C#)',
-      'Web Application Fundamentals & Systems Analysis'
-    ]
-  },
-  {
-    id: 'esoft-english',
-    degree: 'Diploma in English',
-    institution: 'ESOFT Metro Campus',
-    period: '2022 – 2023',
-    location: 'Sri Lanka',
-    summary: 'Advanced professional communication program emphasizing technical writing, formal presentation delivery, research synthesis, and cross-cultural discourse.',
-    courseworkOrHighlights: [
-      'Technical Report Writing & Scientific Documentation',
-      'Professional Public Speaking & Presentation Skills',
-      'Advanced Business Communication'
+      'Diploma in Information Technology: Relational Databases (SQL Server, MySQL), OOP (Java, C#), Web Fundamentals & Systems Analysis',
+      'Diploma in English: Technical Report Writing, Scientific Documentation, Professional Public Speaking & Presentation'
     ]
   },
   {
