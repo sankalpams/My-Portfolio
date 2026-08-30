@@ -68,6 +68,13 @@ export const ChatbotAssistant: React.FC = () => {
       return `For Graph Neural Networks, Malith built an end-to-end node classification pipeline on **OGBN-Arxiv** (169,343 research papers and 1.16M citation edges) using PyTorch Geometric, comparing GCN with multi-head GAT architectures and deploying an interactive Streamlit explorer!`;
     }
 
+    if (q.includes('public pulse') || q.includes('nlp') || q.includes('sarcasm') || q.includes('civic') || q.includes('sinhala') || q.includes('political') || q.includes('roberta')) {
+      return `Malith is actively developing **Public Pulse 🇱🇰 (Ongoing Research)**, a 4-layer cascade NLP civic intelligence system fine-tuned on XLM-RoBERTa for Sri Lankan political YouTube broadcasts:
+• It processes trilingual code-switched comments (**Sinhala script, Singlish phonetics, English**).
+• It disambiguates sarcastic criticism from direct dissent across an 11,540+ ground-truth golden dataset.
+• Its Layer 1 Utility Gatekeeper achieves **30%–50% early-exit compute savings** before downstream inference!`;
+    }
+
     if (q.includes('smartcare') || q.includes('hospital') || q.includes('health')) {
       return `Malith developed **SmartCare Hospital**, a clinical risk prediction system using calibrated Logistic Regression, conducting deep audit checks to eliminate dataset artifacts and target leakage for dependable healthcare triage.`;
     }

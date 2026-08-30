@@ -82,7 +82,7 @@ export const TerminalPage: React.FC = () => {
               <div className="text-zinc-400 mb-1">Available CLI commands:</div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-zinc-300">
                 <div><span className="text-rose-400 font-bold">about</span> — Bio &amp; SLTC Academic Status</div>
-                <div><span className="text-rose-400 font-bold">projects</span> — List 5 ML/DL Engineering Systems</div>
+                <div><span className="text-rose-400 font-bold">projects</span> — List All ML/DL Engineering Systems</div>
                 <div><span className="text-rose-400 font-bold">skills</span> — Full Tech Stack Matrix</div>
                 <div><span className="text-rose-400 font-bold">certifications</span> — Verified DeepLearning.AI &amp; Cisco Credentials</div>
                 <div><span className="text-rose-400 font-bold">contact</span> — Direct Email, Phone, WhatsApp &amp; Socials</div>
