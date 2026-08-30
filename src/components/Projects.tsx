@@ -13,7 +13,7 @@ export const Projects: React.FC = () => {
   const { navigate } = useRouter();
   const [showAll] = useState(false);
 
-  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 5);
+  const displayedProjects = showAll ? projectsData : projectsData.filter(p => p.featured);
 
   const getProjectPreviewMock = (project: Project) => {
     switch (project.id) {
@@ -122,6 +122,43 @@ export const Projects: React.FC = () => {
             <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
               <span className="truncate">Streamlit Visual Subgraph</span>
               <span className="text-violet-400 font-semibold whitespace-nowrap shrink-0">Word2Vec 128D</span>
+            </div>
+          </div>
+        );
+
+      case 'public-pulse':
+        return (
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-3 sm:p-4 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] sm:text-xs font-mono uppercase bg-rose-500/20 text-rose-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
+                  Group NLP Project
+                </span>
+                <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
+                  Public Pulse 🇱🇰 Civic Intel
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-xs font-mono text-amber-400 flex items-center gap-1.5 whitespace-nowrap shrink-0">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-400 animate-pulse" /> Ongoing (Team)
+              </span>
+            </div>
+
+            <div className="relative rounded-xl overflow-hidden border border-zinc-800/90 aspect-[16/8] sm:aspect-[16/7.5] group/thumb">
+              <img 
+                src="/public_pulse_thumb.png" 
+                alt="Public Pulse Trilingual NLP Cascade Dashboard" 
+                className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono text-zinc-300">
+                <span className="bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">සිංහල · Singlish · English</span>
+                <span className="text-rose-300 font-semibold bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">Sarcasm Disambiguation</span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
+              <span className="truncate">Group Initiative: Lead NLP/ML</span>
+              <span className="text-rose-400 font-semibold whitespace-nowrap shrink-0">11,540+ Ground Truth</span>
             </div>
           </div>
         );

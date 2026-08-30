@@ -160,6 +160,71 @@ export const projectsData: Project[] = [
     accentColor: '#818cf8'
   },
   {
+    id: 'public-pulse',
+    title: 'Public Pulse 🇱🇰 — Civic Intelligence & Pragmatic Opinion Mining Platform',
+    shortTitle: 'Public Pulse 🇱🇰 (NLP Cascade)',
+    subtitle: '4-Layer XLM-RoBERTa Cascade for Trilingual & Sarcastic Political Discourse Mining (Ongoing Group Project)',
+    category: 'Deep Learning & NLP',
+    status: 'In Progress',
+    role: 'Lead NLP & Machine Learning Engineer (Group Project)',
+    tags: ['Python', 'PyTorch', 'XLM-RoBERTa', 'Transformers', 'FastAPI', 'PostgreSQL', 'Streamlit', 'NLP', 'Code-Switching', 'Sarcasm Detection', 'Hugging Face'],
+    overview: 'An NLP-driven civic intelligence system built to analyze public sentiment, political stance, and thematic trends across Sri Lankan media and political YouTube broadcasts (Hiru News, Ada Derana, Hari TV, Chamuditha, etc.). Developed as a collaborative group initiative, custom-tailored to process trilingual code-switched comments (Sinhala, Singlish, English) and decipher pragmatic sarcastic criticism vs. direct dissent.',
+    bullets: [
+      'Leading the NLP & ML subsystem within a collaborative group initiative, engineering an independent 4-layer modular cascade powered by fine-tuned XLM-RoBERTa (Utility Gatekeeper ➔ Macro-Topic ➔ Sub-Issue ➔ Stance & Sarcasm).',
+      'Engineered specialized preprocessing and tokenization to handle intra-sentential code-switching across Sinhala script, Singlish phonetics, and English in high-noise live chats and broadcast comments.',
+      'Implemented nuanced pragmatic stance classification separating direct criticism (STANCE_CRIT_DIR) from sarcastic criticism (STANCE_CRIT_SARC), preventing false-positive sentiment classification common in standard NLP tools.',
+      'Collaborated on curating, annotating, and stratifying a ground-truth golden dataset of 11,540+ labeled rows with spam/flooding signal detection and multi-level taxonomy hierarchy.',
+      'Implemented early-exit computation at Layer 1 (Noise & Spam Gatekeeper), discarding 30%–50% of non-informative comments before heavy downstream inference.',
+      'Built a zero-cost cloud MLOps architecture combining Hugging Face Hub model checkpoint storage, FastAPI REST backend, PostgreSQL relational database, and an isolated Streamlit analytics dashboard.'
+    ],
+    keyHighlights: [
+      'Collaborative Group NLP & Civic Intelligence Research',
+      '4-Layer Decoupled XLM-RoBERTa Cascade',
+      'Trilingual Code-Switching (Sinhala / Singlish / English)',
+      'Pragmatic Sarcasm vs Direct Criticism Disambiguation',
+      '11,540+ Ground-Truth Labeled Sri Lankan Dataset',
+      '30%–50% Early-Exit Computational Efficiency',
+      'Zero-Cost Decoupled FastAPI + PostgreSQL + Streamlit MLOps'
+    ],
+    architecture: [
+      {
+        layer: 'Layer 1: Utility Gatekeeper',
+        technology: 'XLM-RoBERTa (Fine-Tuned) + PyTorch',
+        responsibility: 'Filters noise, spam, and live-chat flooding (VALID, NOISE, SPAM) with early-exit discarding to save 30%–50% downstream compute.'
+      },
+      {
+        layer: 'Layer 2: Macro-Topic Classifier',
+        technology: 'XLM-RoBERTa Multi-Class Head',
+        responsibility: 'Categorizes valid civic comments into 6 macro governance domains: Economy, Governance, Public Services, Law & Order, Foreign Affairs, and Media.'
+      },
+      {
+        layer: 'Layer 3: Sub-Issue Granularity',
+        technology: 'Hierarchical XLM-RoBERTa Head',
+        responsibility: 'Maps macro-domain commentary into fine-grained policy issues (e.g., fuel/utility subsidies, institutional corruption, judicial acts).'
+      },
+      {
+        layer: 'Layer 4: Pragmatic Stance & Sarcasm',
+        technology: 'Fine-Tuned XLM-RoBERTa Pragmatic Head',
+        responsibility: 'Deciphers true underlying political stance while resolving sarcasm (STANCE_CRIT_DIR, STANCE_CRIT_SARC, STANCE_SUPP, STANCE_NEUT).'
+      },
+      {
+        layer: 'Data & Analytics Serving Layer',
+        technology: 'PostgreSQL + FastAPI + Streamlit',
+        responsibility: 'Relational storage for broadcasts, comments, and inference scores; FastAPI REST endpoints and Streamlit analytics dashboard with zero client-side PyTorch dependencies.'
+      }
+    ],
+    metrics: [
+      { label: 'Project Type', value: 'Group Initiative', subtext: 'Lead NLP & ML Engineer' },
+      { label: 'Golden Dataset', value: '11,540+ Rows', subtext: 'Curated Ground Truth' },
+      { label: 'Architecture', value: '4-Layer Cascade', subtext: 'Fine-Tuned XLM-RoBERTa' },
+      { label: 'Early-Exit Savings', value: '30% – 50%', subtext: 'Compute Latency Reduction' }
+    ],
+    githubUrl: 'https://github.com/SankalpaMS',
+    image: '/public_pulse_thumb.png',
+    featured: true,
+    accentColor: '#f43f5e'
+  },
+  {
     id: 'customer-churn-mlops',
     title: 'End-to-End Customer Churn Prediction with MLOps Pipeline',
     shortTitle: 'End-to-End Churn MLOps Pipeline',
