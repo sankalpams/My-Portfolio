@@ -12,7 +12,7 @@ export const personalInfo = {
   bio: 'Data Science undergraduate with a strong interest in AI/ML, deep learning, and analytics. I enjoy turning data into practical, explainable solutions — from predictive models to intelligent, data-driven systems.',
   university: 'Sri Lanka Technology Campus (SLTC)',
   degree: 'BSc (Hons) in Data Science',
-  batch: '2023 – 2027 (4th Year)',
+  batch: '2024 – 2027 (4th Year)',
   location: 'Ampara, Sri Lanka',
   email: 'malithsankalpa52@gmail.com',
   phone: '+94 71 335 0404',
@@ -20,12 +20,11 @@ export const personalInfo = {
   phoneClean: '+94713350404',
   linkedin: 'https://www.linkedin.com/in/malithshehan',
   github: 'https://github.com/SankalpaMS',
+  portfolioUrl: 'https://malithshehan.vercel.app/',
   resumeUrl: '/Malith_Shehan_Resume.pdf',
-  currentRole: 'Leading AI/Data Science layer of 4-member Final Year Project (Personal Finance & Investment App)',
+  currentRole: 'Leading AI/Data Science layer of 5-member Final Year Project (Personal Finance & Investment App)',
   openTo: 'Data Science, Machine Learning, or Data Analyst Internship & Entry-Level Roles',
-  summaryText: `I am a driven 4th-year Data Science undergraduate focused on engineering dependable, transparent, and high-impact machine learning solutions. My technical journey spans the complete lifecycle of applied ML: rigorous exploratory data analysis, systematic feature engineering, deep neural architectures (GCNs, GATs, LSTMs, Transformers), model calibration, and post-hoc interpretability via SHAP and LIME.
-
-Currently, I lead the AI & Data Science subsystem for a multi-tier personal finance application, coordinating microservice architectures, predictive pipelines, and statistical validation. I am passionate about bridging the gap between cutting-edge research models and maintainable, production-ready MLOps workflows.`
+  summaryText: `Fourth year Data Science undergraduate with hands-on experience across the full ML lifecycle, data cleaning, feature engineering, model development, and evaluation spanning healthcare classification, graph neural networks, and time series forecasting. Proficient in Python, SQL, and the Scikit-learn/PyTorch ecosystem, with practical MLOps exposure (experiment tracking, reproducible pipelines) and applied deep learning coursework in CNNs, GNNs, and NLP. Currently leading the AI/data science layer of a 5-member Final Year Project building an AI-powered personal finance application. Seeking a Data Science, Machine Learning, or Data Analyst role to apply predictive modeling and explainable AI skills in an applied setting.`
 };
 
 export const quickFacts: QuickFact[] = [
@@ -43,7 +42,7 @@ export const quickFacts: QuickFact[] = [
   },
   {
     label: 'Current Leadership',
-    value: 'AI Lead — 4-Member FYP',
+    value: 'AI Lead — 5-Member FYP',
     subtext: 'FinTech AI & Microservices',
     icon: 'BrainCircuit'
   },
@@ -130,7 +129,7 @@ export const skillCategories: SkillCategory[] = [
     iconName: 'Users',
     description: 'Strategic leadership, cross-functional collaboration, and technical communication.',
     skills: [
-      { name: 'AI Engineering Leadership (4-Member Team)', level: 'Advanced', isKeySkill: true },
+      { name: 'AI Engineering Leadership (5-Member Team)', level: 'Advanced', isKeySkill: true },
       { name: 'Technical Communication & Reporting', level: 'Advanced', isKeySkill: true },
       { name: 'Critical Problem Solving', level: 'Advanced', isKeySkill: true },
       { name: 'System Architecture Design', level: 'Proficient' },
@@ -281,7 +280,7 @@ export const educationTimeline: EducationItem[] = [
     status: 'Currently in 4th Year',
     summary: 'Comprehensive four-year honors program focused on statistical inference, advanced machine learning, deep neural architectures, distributed computing, database management, and big data engineering.',
     courseworkOrHighlights: [
-      'Final Year Project: AI Lead for 4-member team building an AI-Powered Financial Coaching & Investment Sandbox',
+      'Final Year Project: AI Lead for 5-member team building an AI-Powered Financial Coaching & Investment Sandbox',
       'Advanced Machine Learning, Deep Learning (CNNs, GNNs, LSTMs, Transformers), and Natural Language Processing',
       'Data Mining, Statistical Quality Control, Big Data Analytics, and Cloud Database Systems',
       'Active contributor to student technical forums and data science workshops'

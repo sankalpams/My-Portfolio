@@ -9,11 +9,11 @@ export const projectsData: Project[] = [
     category: 'Deep Learning & NLP',
     isFYP: true,
     status: 'In Progress',
-    role: 'Lead AI & Data Science Engineer (4-Member Team)',
+    role: 'Lead AI & Data Science Engineer (5-Member Team)',
     tags: ['Flutter', 'Dart', 'Supabase', 'Python', 'PyTorch', 'LSTM', 'BERT', 'SHAP', 'LIME', 'FastAPI'],
     overview: 'An intelligent personal finance and simulated trading application designed to deliver trustworthy, hyper-personalized financial coaching and expenditure forecasting while guaranteeing transparent model explainability.',
     bullets: [
-      'Leading the AI/data science layer of a 4-member multidisciplinary team within a clean three-layer architecture (Flutter/Dart presentation, decoupled Python AI microservices, and Supabase data layer).',
+      'Own the AI and data science layer of a 5-member Final Year Project, supervised by Dr. Chameera De Silva and Mr. Nethum Dilchitha, within a three-layer architecture (Flutter/Dart presentation, decoupled Python AI microservices, Supabase data layer).',
       'Engineered an LSTM regression architecture for sequential next-month expenditure forecasting across varied transaction categories.',
       'Fine-tuned a domain-adapted BERT Transformer model for real-time financial news sentiment classification to power investment sandbox risk scoring.',
       'Integrated post-hoc explainability using SHAP and LIME across all financial recommendations, allowing users to inspect exact feature contributions behind every AI insight.',
@@ -50,7 +50,7 @@ export const projectsData: Project[] = [
     ],
     metrics: [
       { label: 'Architecture', value: '3-Tier Microservices', subtext: 'Flutter + Python + Supabase' },
-      { label: 'Team Role', value: 'AI / DS Lead', subtext: '4-Member Project' },
+      { label: 'Team Role', value: 'AI / DS Lead', subtext: '5-Member Project' },
       { label: 'Models Deployed', value: 'LSTM + BERT', subtext: 'Forecasting & NLP' },
       { label: 'Transparency', value: 'SHAP / LIME', subtext: '100% Explained Inferences' }
     ],

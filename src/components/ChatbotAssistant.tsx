@@ -46,8 +46,8 @@ export const ChatbotAssistant: React.FC = () => {
 
     if (q.includes('final year') || q.includes('fyp') || q.includes('finance') || q.includes('project')) {
       const fyp = projectsData[0];
-      return `Malith is currently leading the AI & Data Science layer of a 4-member Final Year Project: **${fyp.title}**.
-• He engineered an LSTM sequential forecasting model for expenditure prediction and fine-tuned BERT for financial sentiment classification.
+      return `Malith is currently leading the AI & Data Science layer of a 5-member Final Year Project: **${fyp.title}**.
+• He engineered an LSTM regression model for next-month expenditure prediction and fine-tuned BERT for financial news sentiment classification.
 • He integrated SHAP & LIME for 100% explainable recommendations in a 3-layer architecture (Flutter client, decoupled Python AI microservices, and Supabase data layer).`;
     }
 
