@@ -111,6 +111,15 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                   <GithubIcon className="w-3.5 h-3.5 text-rose-400" />
                   github.com/SankalpaMS
                 </span>
+                <span>•</span>
+                <a
+                  href="https://malithshehan.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-rose-400 hover:underline"
+                >
+                  malithshehan.vercel.app
+                </a>
               </div>
             </div>
 
@@ -125,7 +134,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               PROFESSIONAL SUMMARY
             </h2>
             <p className="text-xs sm:text-sm text-zinc-300 dark:text-zinc-300 leading-relaxed">
-              Fourth-year Data Science undergraduate with hands-on experience across the full ML lifecycle, data cleaning, feature engineering, model development, and evaluation spanning healthcare classification, graph neural networks, and time series forecasting. Proficient in Python, SQL, and the Scikit-learn/PyTorch ecosystem, with practical MLOps exposure (experiment tracking, reproducible pipelines) and applied deep learning coursework in CNNs, GNNs, and NLP. Currently leading the AI/data science layer of a 4-member Final Year Project building an AI-powered personal finance application. Seeking a Data Science, Machine Learning, or Data Analyst role to apply predictive modeling and explainable AI skills in an applied setting.
+              Fourth year Data Science undergraduate with hands-on experience across the full ML lifecycle, data cleaning, feature engineering, model development, and evaluation spanning healthcare classification, graph neural networks, and time series forecasting. Proficient in Python, SQL, and the Scikit-learn/PyTorch ecosystem, with practical MLOps exposure (experiment tracking, reproducible pipelines) and applied deep learning coursework in CNNs, GNNs, and NLP. Currently leading the AI/data science layer of a 5-member Final Year Project building an AI-powered personal finance application. Seeking a Data Science, Machine Learning, or Data Analyst role to apply predictive modeling and explainable AI skills in an applied setting.
             </p>
           </div>
 
@@ -166,7 +175,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                   </span>
                 </div>
                 <ul className="mt-1.5 space-y-1 text-xs text-zinc-300 dark:text-zinc-300 pl-4 list-disc">
-                  <li>Own the AI and data science layer of a 4-member Final Year Project, supervised by Dr. Chameera De Silva and Mr. Nethum Dilchitha, within a three-layer architecture (Flutter/Dart presentation, decoupled Python AI microservices, Supabase data layer).</li>
+                  <li>Own the AI and data science layer of a 5-member Final Year Project, supervised by Dr. Chameera De Silva and Mr. Nethum Dilchitha, within a three-layer architecture (Flutter/Dart presentation, decoupled Python AI microservices, Supabase data layer).</li>
                   <li>Building an LSTM regression model for next-month expenditure prediction and fine-tuning a BERT model for financial news sentiment classification.</li>
                   <li>Applying SHAP/LIME explainability across all model recommendations to support transparent, trustworthy AI, and designing evaluation via SUS scores, MAE, and paired t-tests.</li>
                 </ul>
@@ -226,15 +235,16 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               <div className="text-xs sm:text-sm">
                 <div className="flex flex-wrap justify-between items-baseline">
                   <span className="font-display font-bold text-zinc-100 dark:text-white">
-                    SAPRO v1.0 — Smart Greenhouse Management System
+                    Public Pulse — Civic-Intelligence Opinion Mining Platform
                   </span>
                   <span className="text-[11px] font-mono text-rose-400">
-                    Backend Development · Real-Time Monitoring · Automation
+                    Python · XLM-RoBERTa · FastAPI · PostgreSQL · Streamlit · Hugging Face
                   </span>
                 </div>
                 <ul className="mt-1.5 space-y-1 text-xs text-zinc-300 dark:text-zinc-300 pl-4 list-disc">
-                  <li>Designed and implemented the backend for a smart greenhouse system enabling real-time environmental monitoring and automated control for smart agriculture.</li>
-                  <li>Built services to collect, process, and store environmental data, structuring the database for historical tracking and trend analysis, with automation logic to trigger control actions based on threshold breaches.</li>
+                  <li>Designed a 4-layer modular ML cascade (Utility/Gatekeeper, Macro-Topic, Sub-Issue, Stance/Sarcasm) using fine-tuned XLM-RoBERTa models to analyze trilingual, code-switched (Sinhala, Singlish, English) political commentary from Sri Lankan YouTube channels.</li>
+                  <li>Curated an 11,500+ row golden-sample dataset labeled for utility, topic, sub-issue, stance, and sarcasm, capturing spam/flood signals and mixed-language patterns to ground model training.</li>
+                  <li>Architected a zero-cost, decoupled MLOps stack (Hugging Face-hosted checkpoints, PostgreSQL on Supabase/Neon, FastAPI backend, Streamlit dashboard) so the frontend never loads model weights directly.</li>
                 </ul>
               </div>
             </div>
@@ -325,6 +335,16 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* References */}
+          <div>
+            <h2 className="text-xs font-mono uppercase tracking-wider text-rose-400 font-bold mb-2">
+              REFERENCES
+            </h2>
+            <p className="text-xs text-zinc-400 font-mono">
+              Available upon request.
+            </p>
           </div>
 
         </div>
