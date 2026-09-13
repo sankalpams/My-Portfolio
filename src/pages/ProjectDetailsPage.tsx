@@ -194,17 +194,17 @@ export const ProjectDetailsPage: React.FC = () => {
           <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#140a10] border border-rose-500/30 font-mono shadow-2xl relative overflow-hidden">
             <div className="flex flex-wrap items-center justify-between border-b border-zinc-800 pb-3 sm:pb-4 mb-4 sm:mb-6 gap-2 sm:gap-3">
               <div className="flex items-center gap-2.5">
-                <span className="w-3 h-3 rounded-full bg-amber-400 animate-pulse" />
+                <span className="w-3 h-3 rounded-full bg-emerald-400" />
                 <span className="text-xs font-bold text-amber-300 uppercase tracking-wider">
-                  Collaborative Group Project — 4-Layer XLM-RoBERTa Cascade
+                  Collaborative Group Project — Grounded LLM + XLM-RoBERTa Cascade
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs text-rose-300/90 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/30 font-semibold">
                   👥 Group Research
                 </span>
-                <span className="text-xs text-amber-300/90 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/30 font-semibold">
-                  ● In Active Development
+                <span className="text-xs text-emerald-300/90 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/30 font-semibold">
+                  ● Completed
                 </span>
               </div>
             </div>
@@ -221,25 +221,25 @@ export const ProjectDetailsPage: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
                 <span className="text-[11px] text-zinc-500 block uppercase">Curated Ground Truth</span>
-                <span className="text-base font-bold text-white mt-1 block">11,540+ Labeled Rows</span>
-                <span className="text-xs text-rose-400 mt-1 block font-semibold">Video Comments & Live Chats</span>
+                <span className="text-base font-bold text-white mt-1 block">10,000 Golden Rows</span>
+                <span className="text-xs text-rose-400 mt-1 block font-semibold">Stratified from 43,469 Raw Comments</span>
               </div>
 
               <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
-                <span className="text-[11px] text-zinc-500 block uppercase">Early-Exit Optimization</span>
-                <span className="text-base font-bold text-white mt-1 block">30%–50% Compute Saved</span>
-                <span className="text-xs text-emerald-400 mt-1 block font-semibold">Layer 1 Noise/Spam Filter</span>
+                <span className="text-[11px] text-zinc-500 block uppercase">Classifier Macro-F1</span>
+                <span className="text-base font-bold text-white mt-1 block">0.98 / 0.72 / 0.86</span>
+                <span className="text-xs text-emerald-400 mt-1 block font-semibold">Utility · Topic · Stance</span>
               </div>
 
               <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
-                <span className="text-[11px] text-zinc-500 block uppercase">Pragmatic Stance</span>
-                <span className="text-base font-bold text-white mt-1 block">Sarcasm Disambiguation</span>
-                <span className="text-xs text-cyan-400 mt-1 block font-semibold">Direct vs Sarcastic Dissent</span>
+                <span className="text-[11px] text-zinc-500 block uppercase">Faithfulness Verification</span>
+                <span className="text-base font-bold text-white mt-1 block">Grounded LLM Insights</span>
+                <span className="text-xs text-cyan-400 mt-1 block font-semibold">Gemini + BM25 Cited Evidence</span>
               </div>
             </div>
 
             <div className="text-xs text-zinc-400 flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-zinc-800/80">
-              <span>Sri Lankan Political Discourse (Hiru, Ada Derana, Hari TV, Chamuditha)</span>
+              <span>Sri Lankan TV-News Discourse (Hiru, Ada Derana, Sirasa, ITN &amp; more)</span>
               <span className="text-rose-400 font-semibold">Group Research Project · Lead NLP &amp; ML Engineer</span>
             </div>
           </div>

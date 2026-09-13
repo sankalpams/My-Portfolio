@@ -238,13 +238,13 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                     Public Pulse — Civic-Intelligence Opinion Mining Platform
                   </span>
                   <span className="text-[11px] font-mono text-rose-400">
-                    Python · XLM-RoBERTa · FastAPI · PostgreSQL · Streamlit · Hugging Face
+                    Python · XLM-RoBERTa · Gemini API · FastAPI · PostgreSQL · React/TypeScript
                   </span>
                 </div>
                 <ul className="mt-1.5 space-y-1 text-xs text-zinc-300 dark:text-zinc-300 pl-4 list-disc">
-                  <li>Designed a 4-layer modular ML cascade (Utility/Gatekeeper, Macro-Topic, Sub-Issue, Stance/Sarcasm) using fine-tuned XLM-RoBERTa models to analyze trilingual, code-switched (Sinhala, Singlish, English) political commentary from Sri Lankan YouTube channels.</li>
-                  <li>Curated an 11,500+ row golden-sample dataset labeled for utility, topic, sub-issue, stance, and sarcasm, capturing spam/flood signals and mixed-language patterns to ground model training.</li>
-                  <li>Architected a zero-cost, decoupled MLOps stack (Hugging Face-hosted checkpoints, PostgreSQL on Supabase/Neon, FastAPI backend, Streamlit dashboard) so the frontend never loads model weights directly.</li>
+                  <li>Designed a 3-layer modular XLM-RoBERTa cascade (Utility/Gatekeeper, Macro-Topic, Pragmatic Stance) to analyze trilingual, code-switched (Sinhala, Singlish, English) TV-news commentary from Sri Lankan YouTube channels, reaching held-out macro-F1 of 0.98 / 0.72 / 0.86.</li>
+                  <li>Curated a 10,000-row stratified golden-sample dataset from 43,469 raw comments, then built a deterministic BM25 evidence-retrieval layer and a Gemini-powered Grounded LLM that cites only retrieved evidence.</li>
+                  <li>Implemented a 3-stage faithfulness-verification engine and shipped a decoupled MLOps stack (PostgreSQL on Supabase/Neon, FastAPI backend, React/TypeScript dashboard) validated by 171 passing automated tests.</li>
                 </ul>
               </div>
             </div>

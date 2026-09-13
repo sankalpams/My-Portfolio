@@ -160,8 +160,8 @@ export const ProjectsPage: React.FC = () => {
                   Public Pulse 🇱🇰 Civic Intel
                 </span>
               </div>
-              <span className="text-[10px] sm:text-xs font-mono text-amber-400 flex items-center gap-1.5 whitespace-nowrap shrink-0">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-400 animate-pulse" /> Ongoing (Team)
+              <span className="text-[10px] sm:text-xs font-mono text-emerald-400 flex items-center gap-1.5 whitespace-nowrap shrink-0">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400" /> Completed (Team)
               </span>
             </div>
 
@@ -174,13 +174,13 @@ export const ProjectsPage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono text-zinc-300">
                 <span className="bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">සිංහල · Singlish · English</span>
-                <span className="text-rose-300 font-semibold bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">Sarcasm Disambiguation</span>
+                <span className="text-rose-300 font-semibold bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">Faithfulness Verified LLM</span>
               </div>
             </div>
 
             <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
               <span className="truncate">Group Initiative: Lead NLP/ML</span>
-              <span className="text-rose-400 font-semibold whitespace-nowrap shrink-0">11,540+ Ground Truth</span>
+              <span className="text-rose-400 font-semibold whitespace-nowrap shrink-0">10,000-Row Golden Set</span>
             </div>
           </div>
         );

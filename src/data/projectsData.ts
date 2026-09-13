@@ -161,65 +161,70 @@ export const projectsData: Project[] = [
   },
   {
     id: 'public-pulse',
-    title: 'Public Pulse 🇱🇰 — Civic Intelligence & Pragmatic Opinion Mining Platform',
-    shortTitle: 'Public Pulse 🇱🇰 (NLP Cascade)',
-    subtitle: '4-Layer XLM-RoBERTa Cascade for Trilingual & Sarcastic Political Discourse Mining (Ongoing Group Project)',
+    title: 'Public Pulse 🇱🇰 — Grounded LLM System for Sri Lankan Public Discourse',
+    shortTitle: 'Public Pulse 🇱🇰 (Grounded LLM System)',
+    subtitle: 'Fine-Tuned XLM-RoBERTa Cascade + BM25 Evidence Retrieval + Faithfulness-Verified Grounded LLM Insights (CCS4310 Deep Learning Group Project)',
     category: 'Deep Learning & NLP',
-    status: 'In Progress',
-    role: 'Lead NLP & Machine Learning Engineer (Group Project)',
-    tags: ['Python', 'PyTorch', 'XLM-RoBERTa', 'Transformers', 'FastAPI', 'PostgreSQL', 'Streamlit', 'NLP', 'Code-Switching', 'Sarcasm Detection', 'Hugging Face'],
-    overview: 'An NLP-driven civic intelligence system built to analyze public sentiment, political stance, and thematic trends across Sri Lankan media and political YouTube broadcasts (Hiru News, Ada Derana, Hari TV, Chamuditha, etc.). Developed as a collaborative group initiative, custom-tailored to process trilingual code-switched comments (Sinhala, Singlish, English) and decipher pragmatic sarcastic criticism vs. direct dissent.',
+    status: 'Completed',
+    role: 'Lead NLP & Machine Learning Engineer (6-Member Group Project)',
+    tags: ['Python', 'PyTorch', 'XLM-RoBERTa', 'Transformers', 'Hugging Face', 'Gemini API', 'BM25', 'RAG', 'FastAPI', 'PostgreSQL', 'React', 'TypeScript', 'NLP', 'Code-Switching'],
+    overview: 'A grounded, multilingual NLP system built at SLTC to transform Sinhala, Singlish, and English commentary beneath Sri Lankan TV-news YouTube broadcasts (Hiru, Ada Derana, Sirasa, ITN, and others) into trustworthy, evidence-traceable public-discourse insights. Combines a fine-tuned XLM-RoBERTa classification cascade with deterministic BM25 evidence retrieval and a Grounded LLM (Gemini) insight generator whose every claim is independently checked against cited evidence — directly addressing the hallucination risk of unconstrained LLM summarization for civic and journalistic use.',
     bullets: [
-      'Leading the NLP & ML subsystem within a collaborative group initiative, engineering an independent 4-layer modular cascade powered by fine-tuned XLM-RoBERTa (Utility Gatekeeper ➔ Macro-Topic ➔ Sub-Issue ➔ Stance & Sarcasm).',
-      'Engineered specialized preprocessing and tokenization to handle intra-sentential code-switching across Sinhala script, Singlish phonetics, and English in high-noise live chats and broadcast comments.',
-      'Implemented nuanced pragmatic stance classification separating direct criticism (STANCE_CRIT_DIR) from sarcastic criticism (STANCE_CRIT_SARC), preventing false-positive sentiment classification common in standard NLP tools.',
-      'Collaborated on curating, annotating, and stratifying a ground-truth golden dataset of 11,540+ labeled rows with spam/flooding signal detection and multi-level taxonomy hierarchy.',
-      'Implemented early-exit computation at Layer 1 (Noise & Spam Gatekeeper), discarding 30%–50% of non-informative comments before heavy downstream inference.',
-      'Built a zero-cost cloud MLOps architecture combining Hugging Face Hub model checkpoint storage, FastAPI REST backend, PostgreSQL relational database, and an isolated Streamlit analytics dashboard.'
+      'Co-engineered a grounded LLM civic-intelligence system combining a fine-tuned XLM-RoBERTa classification cascade with deterministic BM25 evidence retrieval and Gemini-powered, citation-restricted insight generation across 14 Sri Lankan TV-news YouTube programs.',
+      'Built and validated a 3-layer classification cascade (Utility Gatekeeper ➔ Macro-Topic ➔ Pragmatic Stance) on a 10,000-row stratified Golden Sample drawn from 43,469 raw comments, reaching held-out macro-F1 scores of 0.98, 0.72, and 0.86 respectively.',
+      'Designed a 10-stage BM25 evidence-retrieval pipeline with deterministic multi-key sorting, duplicate control, and stance-proportional diversity quotas to prevent manufactured-consensus bias in generated insights.',
+      'Implemented a 3-stage faithfulness-verification engine (deterministic rules, lexical overlap, multilingual semantic entailment) that atomically labels every LLM-generated claim as Supported, Partially Supported, Unsupported, or Contradicted.',
+      'Engineered ethical safeguards end-to-end — HMAC-SHA256 author pseudonymization, aggregate-only reporting, and prompt-injection isolation for untrusted comment text — validated by 171 passing automated tests.',
+      'Shipped a FastAPI backend and a 14-view React 18/TypeScript analytics dashboard (Zustand, TanStack Query) exposing the full pipeline through a versioned REST contract with zero direct database coupling.'
     ],
     keyHighlights: [
-      'Collaborative Group NLP & Civic Intelligence Research',
-      '4-Layer Decoupled XLM-RoBERTa Cascade',
-      'Trilingual Code-Switching (Sinhala / Singlish / English)',
-      'Pragmatic Sarcasm vs Direct Criticism Disambiguation',
-      '11,540+ Ground-Truth Labeled Sri Lankan Dataset',
-      '30%–50% Early-Exit Computational Efficiency',
-      'Zero-Cost Decoupled FastAPI + PostgreSQL + Streamlit MLOps'
+      'Grounded LLM System with Independent Faithfulness Verification',
+      '3-Layer Fine-Tuned XLM-RoBERTa Cascade (Utility → Topic → Stance)',
+      'Deterministic BM25 Evidence Retrieval with Stance-Diversity Quotas',
+      'Citation-Bound Insight Generation via Google Gemini API',
+      'Four-Class Atomic-Claim Faithfulness Taxonomy (171 Automated Tests)',
+      '10,000-Row Golden Dataset Curated from 43,469 Trilingual Comments',
+      'HMAC-SHA256 Author Pseudonymization & Aggregate-Only Ethical Safeguards'
     ],
     architecture: [
       {
-        layer: 'Layer 1: Utility Gatekeeper',
-        technology: 'XLM-RoBERTa (Fine-Tuned) + PyTorch',
-        responsibility: 'Filters noise, spam, and live-chat flooding (VALID, NOISE, SPAM) with early-exit discarding to save 30%–50% downstream compute.'
+        layer: 'Data Collection & Extraction',
+        technology: 'YouTube Data API v3 (Python)',
+        responsibility: 'Idempotent scraping of 14 Sri Lankan TV-news YouTube programs across 8 channels, with HMAC-SHA256 author pseudonymization and a raw-text preservation contract.'
       },
       {
-        layer: 'Layer 2: Macro-Topic Classifier',
-        technology: 'XLM-RoBERTa Multi-Class Head',
-        responsibility: 'Categorizes valid civic comments into 6 macro governance domains: Economy, Governance, Public Services, Law & Order, Foreign Affairs, and Media.'
+        layer: '3-Layer Classification Cascade',
+        technology: 'Fine-Tuned XLM-RoBERTa-base (PyTorch)',
+        responsibility: 'Utility gatekeeper (VALID/NOISE) ➔ macro-topic (5 classes) ➔ pragmatic stance (CRIT/NEUT/SUPP), trained with class-weighted loss and stratified oversampling.'
       },
       {
-        layer: 'Layer 3: Sub-Issue Granularity',
-        technology: 'Hierarchical XLM-RoBERTa Head',
-        responsibility: 'Maps macro-domain commentary into fine-grained policy issues (e.g., fuel/utility subsidies, institutional corruption, judicial acts).'
+        layer: 'Evidence Retrieval Engine',
+        technology: 'BM25 + PostgreSQL',
+        responsibility: 'Deterministic 10-stage retrieval pipeline with multi-key sorting, duplicate control, and stance-proportional diversity quotas for citation-grounded evidence sets.'
       },
       {
-        layer: 'Layer 4: Pragmatic Stance & Sarcasm',
-        technology: 'Fine-Tuned XLM-RoBERTa Pragmatic Head',
-        responsibility: 'Deciphers true underlying political stance while resolving sarcasm (STANCE_CRIT_DIR, STANCE_CRIT_SARC, STANCE_SUPP, STANCE_NEUT).'
+        layer: 'Grounded LLM Insight Generation',
+        technology: 'Google Gemini API (gemini-2.5-flash)',
+        responsibility: 'Generates citation-bound findings restricted to retrieved evidence under five prompt-security rules, refusing to generate below a minimum evidence threshold.'
       },
       {
-        layer: 'Data & Analytics Serving Layer',
-        technology: 'PostgreSQL + FastAPI + Streamlit',
-        responsibility: 'Relational storage for broadcasts, comments, and inference scores; FastAPI REST endpoints and Streamlit analytics dashboard with zero client-side PyTorch dependencies.'
+        layer: 'Faithfulness Verification Engine',
+        technology: 'Rule-Based + Multilingual Semantic NLI',
+        responsibility: 'Three-stage atomic-claim verifier scoring every generated claim as Supported, Partially Supported, Unsupported, or Contradicted against its cited evidence.'
+      },
+      {
+        layer: 'API & Analytics Dashboard',
+        technology: 'FastAPI + React 18/TypeScript (Zustand, TanStack Query)',
+        responsibility: '14-view dashboard (Overview, Explore, Sources, AI Intelligence, Data) consuming a versioned REST contract with zero direct database coupling.'
       }
     ],
     metrics: [
-      { label: 'Project Type', value: 'Group Initiative', subtext: 'Lead NLP & ML Engineer' },
-      { label: 'Golden Dataset', value: '11,540+ Rows', subtext: 'Curated Ground Truth' },
-      { label: 'Architecture', value: '4-Layer Cascade', subtext: 'Fine-Tuned XLM-RoBERTa' },
-      { label: 'Early-Exit Savings', value: '30% – 50%', subtext: 'Compute Latency Reduction' }
+      { label: 'Golden Dataset', value: '10,000 Rows', subtext: 'Stratified from 43,469 Raw Comments' },
+      { label: 'Classifier Macro-F1', value: '0.98 / 0.72 / 0.86', subtext: 'Utility / Topic / Stance' },
+      { label: 'Automated Tests', value: '171 / 171 Passing', subtext: 'Full CI Test Suite' },
+      { label: 'Architecture', value: 'Cascade + RAG', subtext: 'XLM-RoBERTa + BM25 + Gemini' }
     ],
-    githubUrl: 'https://github.com/SankalpaMS',
+    githubUrl: 'https://github.com/ThilaniDilmani/public-pulse-srilanka',
     image: '/public_pulse_thumb.png',
     featured: true,
     accentColor: '#f43f5e'
