@@ -19,37 +19,37 @@ export const Projects: React.FC = () => {
     switch (project.id) {
       case 'financial-ai-coaching':
         return (
-          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-3 sm:p-4 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
             <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
               <div className="flex items-center gap-2 min-w-0">
                 <span className="text-[10px] sm:text-xs font-mono uppercase bg-rose-500/20 text-rose-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
                   FYP AI Layer
                 </span>
                 <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
-                  Expense &amp; Sentiment Engine
+                  FinanceAI Sandbox
                 </span>
               </div>
               <span className="text-[10px] sm:text-xs font-mono text-emerald-400 flex items-center gap-1.5 whitespace-nowrap shrink-0">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse" /> Active
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse" /> In Progress
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 sm:gap-3 font-mono">
-              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">Forecast Model</span>
-                <span className="text-xs sm:text-sm font-bold text-white block truncate mt-0.5">LSTM Sequential</span>
-                <span className="text-[10px] sm:text-xs text-rose-400 block mt-0.5 font-semibold">MAE: 4.2%</span>
-              </div>
-              <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span className="text-[10px] sm:text-xs text-zinc-400 block truncate">Explainability</span>
-                <span className="text-xs sm:text-sm font-bold text-white block truncate mt-0.5">SHAP &amp; LIME</span>
-                <span className="text-[10px] sm:text-xs text-cyan-400 block mt-0.5 font-semibold">100% Attributed</span>
+            <div className="relative rounded-xl overflow-hidden border border-zinc-800/90 aspect-[16/8] sm:aspect-[16/7.5] group/thumb">
+              <img 
+                src="/financial_ai_thumb.jpg" 
+                alt="AI Financial Coaching & Sandbox Investment Training App" 
+                className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono text-zinc-300">
+                <span className="bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">LSTM + BERT</span>
+                <span className="text-cyan-300 font-semibold bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">SHAP / LIME</span>
               </div>
             </div>
 
             <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
               <span className="truncate">Flutter UI ↔ FastAPI AI</span>
-              <span className="text-rose-400 font-semibold whitespace-nowrap shrink-0">Supabase DB</span>
+              <span className="text-rose-400 font-semibold whitespace-nowrap shrink-0">MAE: 4.2%</span>
             </div>
           </div>
         );
@@ -163,6 +163,43 @@ export const Projects: React.FC = () => {
           </div>
         );
 
+      case 'customer-churn-mlops':
+        return (
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-3 sm:p-4 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] sm:text-xs font-mono uppercase bg-emerald-500/20 text-emerald-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
+                  MLOps &amp; Tracking
+                </span>
+                <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
+                  ChurnOps Pipeline
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-xs font-mono text-emerald-400 whitespace-nowrap shrink-0">
+                ● DagsHub &amp; DVC
+              </span>
+            </div>
+
+            <div className="relative rounded-xl overflow-hidden border border-zinc-800/90 aspect-[16/8] sm:aspect-[16/7.5] group/thumb">
+              <img 
+                src="/churn_mlops_thumb.jpg" 
+                alt="End-to-End Customer Churn MLOps Pipeline" 
+                className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono text-zinc-300">
+                <span className="bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">Pipeline DAG Workflow</span>
+                <span className="text-emerald-300 font-semibold bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">ROC-AUC: 0.89</span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
+              <span className="truncate">XGBoost Feature Importance</span>
+              <span className="text-emerald-400 font-semibold whitespace-nowrap shrink-0">100% Reproducible</span>
+            </div>
+          </div>
+        );
+
       case 'interactive-data-science-portfolio':
         return (
           <div className="w-full bg-[#0c0d14] rounded-2xl p-3 sm:p-4 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
@@ -182,7 +219,7 @@ export const Projects: React.FC = () => {
 
             <div className="relative rounded-xl overflow-hidden border border-zinc-800/90 aspect-[16/8] sm:aspect-[16/7.5] group/thumb">
               <img 
-                src="/portfolio_thumb.png" 
+                src="/portfolio_showcase_thumb.jpg" 
                 alt="My Portfolio Web Showcase" 
                 className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
               />
@@ -200,29 +237,77 @@ export const Projects: React.FC = () => {
           </div>
         );
 
+      case 'sapro-greenhouse-system':
+        return (
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-3 sm:p-4 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] sm:text-xs font-mono uppercase bg-amber-500/20 text-amber-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
+                  IoT Telemetry
+                </span>
+                <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
+                  SAPRO v1.0 Greenhouse
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-xs font-mono text-amber-400 whitespace-nowrap shrink-0">
+                ● Telemetry Live
+              </span>
+            </div>
+
+            <div className="relative rounded-xl overflow-hidden border border-zinc-800/90 aspect-[16/8] sm:aspect-[16/7.5] group/thumb">
+              <img 
+                src="/sapro_greenhouse_thumb.jpg" 
+                alt="SAPRO v1.0 Smart Greenhouse Management System" 
+                className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono text-zinc-300">
+                <span className="bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">Sensor Gauges</span>
+                <span className="text-amber-300 font-semibold bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">Automated Actuation</span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
+              <span className="truncate">PostgreSQL Time-Series DB</span>
+              <span className="text-amber-400 font-semibold whitespace-nowrap shrink-0">Event-Driven Automation</span>
+            </div>
+          </div>
+        );
+
       default:
         return (
-          <div className="w-full bg-[#0c0d14] rounded-2xl p-4 sm:p-5 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
+          <div className="w-full bg-[#0c0d14] rounded-2xl p-3 sm:p-4 border border-zinc-800/80 flex flex-col justify-between relative group-hover:border-rose-500/40 transition-colors gap-3">
             <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2.5 gap-2">
               <div className="flex items-center gap-2 min-w-0">
                 <span className="text-[10px] sm:text-xs font-mono uppercase bg-emerald-500/20 text-emerald-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-semibold whitespace-nowrap shrink-0">
-                  MLOps &amp; Tracking
+                  {project.category}
                 </span>
                 <span className="text-xs sm:text-sm font-mono text-zinc-300 truncate">
                   {project.shortTitle}
                 </span>
               </div>
-              <span className="text-[10px] sm:text-xs font-mono text-zinc-400 whitespace-nowrap shrink-0">DagsHub &amp; DVC</span>
+              <span className="text-[10px] sm:text-xs font-mono text-zinc-400 whitespace-nowrap shrink-0">{project.status || 'Active'}</span>
             </div>
 
-            <div className="p-2.5 sm:p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 font-mono">
-              <div className="text-xs sm:text-sm text-zinc-200 font-semibold mb-1 truncate">Automated Reproducible Pipeline</div>
-              <div className="text-[10px] sm:text-xs text-zinc-400 truncate">Ingestion ➔ EDA ➔ XGBoost ➔ Registry</div>
-            </div>
+            {project.image ? (
+              <div className="relative rounded-xl overflow-hidden border border-zinc-800/90 aspect-[16/8] sm:aspect-[16/7.5] group/thumb">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+              </div>
+            ) : (
+              <div className="p-2.5 sm:p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 font-mono">
+                <div className="text-xs sm:text-sm text-zinc-200 font-semibold mb-1 truncate">{project.subtitle}</div>
+                <div className="text-[10px] sm:text-xs text-zinc-400 truncate">{project.overview}</div>
+              </div>
+            )}
 
             <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-zinc-300 border-t border-zinc-800/80 pt-2.5 gap-2">
-              <span className="truncate">100% Reproducible Experiments</span>
-              <span className="text-emerald-400 font-semibold whitespace-nowrap shrink-0">Production Ready</span>
+              <span className="truncate">{project.tags.slice(0, 3).join(' · ')}</span>
+              <span className="text-emerald-400 font-semibold whitespace-nowrap shrink-0">{project.status}</span>
             </div>
           </div>
         );

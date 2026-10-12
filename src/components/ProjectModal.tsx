@@ -71,6 +71,17 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         {/* Content Body */}
         <div className="py-6 space-y-8">
           
+          {/* Visual Showcase */}
+          {project.image && (
+            <div className="rounded-2xl overflow-hidden border border-slate-800 bg-black/40 shadow-inner group">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full h-auto max-h-[300px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
+              />
+            </div>
+          )}
+
           {/* Overview */}
           <div>
             <h3 className="text-sm font-mono uppercase text-brand-400 tracking-wider mb-2 flex items-center gap-2">

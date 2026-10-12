@@ -55,6 +55,7 @@ export const projectsData: Project[] = [
       { label: 'Transparency', value: 'SHAP / LIME', subtext: '100% Explained Inferences' }
     ],
     githubUrl: 'https://github.com/SankalpaMS',
+    image: '/financial_ai_thumb.jpg',
     featured: true,
     accentColor: '#06b6d4'
   },
@@ -276,6 +277,7 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/sankalpams/End-to-End-Customer-Churn-Prediction-with-Full-MLOps-Pipeline.git',
     dagshubUrl: 'https://dagshub.com/thilanisenarath403/churn-mlops-project',
     liveUrl: 'https://dagshub.com/thilanisenarath403/churn-mlops-project',
+    image: '/churn_mlops_thumb.jpg',
     featured: true,
     accentColor: '#10b981'
   },
@@ -332,7 +334,7 @@ export const projectsData: Project[] = [
     ],
     githubUrl: 'https://github.com/sankalpams/My-Portfolio',
     liveUrl: 'https://sankalpams.github.io/My-Portfolio/',
-    image: '/portfolio_thumb.png',
+    image: '/portfolio_showcase_thumb.jpg',
     featured: true,
     accentColor: '#f43f5e'
   },
@@ -381,6 +383,7 @@ export const projectsData: Project[] = [
       { label: 'Automation', value: 'Event-Driven', subtext: 'Threshold Actuation' }
     ],
     githubUrl: 'https://github.com/SankalpaMS',
+    image: '/sapro_greenhouse_thumb.jpg',
     featured: false,
     accentColor: '#f59e0b'
   }

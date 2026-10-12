@@ -60,6 +60,15 @@ export const ProjectDetailsPage: React.FC = () => {
               </span>
             </div>
 
+            {/* Visual Screenshot Showcase */}
+            <div className="mb-6 rounded-2xl overflow-hidden border border-zinc-800 bg-black/40 shadow-inner group">
+              <img 
+                src="/financial_ai_thumb.jpg" 
+                alt="AI-Based Personalized Financial Coaching & Sandbox Investment Training App" 
+                className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
+              />
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
                 <span className="text-[11px] text-zinc-500 block uppercase">Sequential Forecaster</span>
@@ -260,6 +269,15 @@ export const ProjectDetailsPage: React.FC = () => {
               </span>
             </div>
 
+            {/* Visual Screenshot Showcase */}
+            <div className="mb-6 rounded-2xl overflow-hidden border border-zinc-800 bg-black/40 shadow-inner group">
+              <img 
+                src="/churn_mlops_thumb.jpg" 
+                alt="End-to-End Customer Churn Prediction with MLOps Pipeline" 
+                className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
+              />
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               <div className="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800">
                 <span className="text-[11px] text-zinc-500 block uppercase">Experiment Tracking</span>
@@ -305,7 +323,7 @@ export const ProjectDetailsPage: React.FC = () => {
             {/* Visual Screenshot Showcase */}
             <div className="mb-6 rounded-2xl overflow-hidden border border-zinc-800 bg-black/40 shadow-inner group">
               <img 
-                src="/portfolio_thumb.png" 
+                src="/portfolio_showcase_thumb.jpg" 
                 alt="My Portfolio Web Showcase" 
                 className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
               />
@@ -351,6 +369,15 @@ export const ProjectDetailsPage: React.FC = () => {
               <span className="text-xs text-zinc-400 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800">
                 PostgreSQL Time-Series + Python Engine
               </span>
+            </div>
+
+            {/* Visual Screenshot Showcase */}
+            <div className="mb-6 rounded-2xl overflow-hidden border border-zinc-800 bg-black/40 shadow-inner group">
+              <img 
+                src="/sapro_greenhouse_thumb.jpg" 
+                alt="SAPRO v1.0 Smart Greenhouse Management System" 
+                className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
+              />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
