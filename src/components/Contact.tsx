@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   Mail, 
   Phone, 
-  MapPin, 
   Send, 
   Check, 
   Copy, 
@@ -200,19 +199,6 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
             </a>
           </div>
 
-        </div>
-
-        {/* Location & Status Bar */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#09090c] border border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono mb-12 card-3d">
-          <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-            <MapPin className="w-4 h-4 text-rose-500 dark:text-rose-400 shrink-0" />
-            <span>Based in <strong className="text-zinc-900 dark:text-white">Ampara, Sri Lanka</strong></span>
-          </div>
-
-          <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Actively open to data science &amp; ML engineering opportunities</span>
-          </div>
         </div>
 
         {/* Message Form & Resume Download CTA */}
