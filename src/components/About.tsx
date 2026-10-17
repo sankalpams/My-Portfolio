@@ -9,10 +9,22 @@ import { personalInfo } from '../data/portfolioData';
 
 export const About: React.FC = () => {
   const focusAreas = [
-    { title: 'Machine Learning', desc: 'Building and evaluating models across classification, regression, and prediction tasks — from data cleaning to deployment.' },
-    { title: 'Deep Learning', desc: 'Designing neural network architectures including graph neural networks (GNNs), LSTMs, and transformer-based models.' },
-    { title: 'Artificial Intelligence', desc: 'Applying AI techniques to real-world problems, with a focus on explainability and trustworthy decision-making.' },
-    { title: 'Data Analytics', desc: 'Turning raw data into clear insights through exploration, visualization, and statistical analysis.' },
+    { 
+      title: 'Data Engineering', 
+      desc: 'Architecting end-to-end ETL/ELT pipelines, automated ingestion, validation, deduplication, and relational schema modeling in PostgreSQL & MySQL.' 
+    },
+    { 
+      title: 'Cloud Data Platforms & APIs', 
+      desc: 'Designing zero-cost cloud data stacks (Supabase, Neon serverless Postgres) and serving decoupled data via FastAPI REST microservices.' 
+    },
+    { 
+      title: 'Machine Learning & Deep Learning', 
+      desc: 'Building and evaluating models across tabular data, time series forecasting, NLP (BERT, XLM-RoBERTa), and Graph Neural Networks (GNNs).' 
+    },
+    { 
+      title: 'MLOps & CI/CD Pipelines', 
+      desc: 'Packaging reproducible, version-controlled workflows with DagsHub, Docker containerization, and automated GitHub Actions pipelines.' 
+    },
   ];
 
   return (
@@ -31,11 +43,11 @@ export const About: React.FC = () => {
 
             <div className="space-y-4 text-sm sm:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed">
               <p>
-                I'm a <strong className="text-zinc-900 dark:text-white font-semibold">Data Science undergraduate</strong> passionate about AI/ML, deep learning, and data analytics. I enjoy building systems that go beyond just accurate predictions — models that are reliable, interpretable, and genuinely useful. My work has spanned forecasting pipelines, classification models, and interactive AI tools, with a growing focus on deep learning and explainable AI.
+                I'm a <strong className="text-zinc-900 dark:text-white font-semibold">final-year Data Science undergraduate</strong> focused on building the data infrastructure behind modern analytics and ML products. Hands-on with end-to-end pipelines: ingestion, cleaning, validation, transformation, relational modelling in PostgreSQL/MySQL, and serving data through decoupled APIs.
               </p>
 
               <p>
-                I'm currently studying at <strong className="text-rose-600 dark:text-rose-300 font-medium">Sri Lanka Technology Campus (SLTC)</strong>, where I'm building a strong foundation in machine learning, analytics, and applied AI through coursework and hands-on projects.
+                Currently studying at <strong className="text-rose-600 dark:text-rose-300 font-medium">Sri Lanka Technology Campus (SLTC)</strong>, I combine strong Python and SQL skills with reproducible workflows (DagsHub, Docker, GitHub Actions) and a practical machine learning background to engineer data systems teams can rely on.
               </p>
             </div>
 
