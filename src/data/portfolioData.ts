@@ -11,11 +11,11 @@ export const personalInfo = {
     'Python, SQL, PyTorch',
     'MLOps & Data Infrastructure',
   ],
-  bio: 'Data Science undergraduate with a strong interest in AI/ML, deep learning, and analytics. I enjoy turning data into practical, explainable solutions — from predictive models to intelligent, data-driven systems.',
+  bio: 'Final-year Data Science undergraduate focused on building the data infrastructure behind analytics and ML products. Experienced in end-to-end ETL pipelines, relational modeling, and decoupled API serving.',
   university: 'Sri Lanka Technology Campus (SLTC)',
   degree: 'BSc (Hons) in Data Science',
-  batch: '2024 – 2027 (4th Year)',
-  location: 'Ampara, Sri Lanka',
+  batch: '2024 – Present (Final Year)',
+  location: 'Padukka, Sri Lanka',
   email: 'malithsankalpa52@gmail.com',
   phone: '+94 71 335 0404',
 
@@ -25,20 +25,20 @@ export const personalInfo = {
   portfolioUrl: 'https://malithshehan.vercel.app/',
   resumeUrl: '/Malith_Shehan_Resume.pdf',
   currentRole: 'Leading AI/Data Science layer of 5-member Final Year Project (Personal Finance & Investment App)',
-  openTo: 'Data Science, Machine Learning, or Data Analyst Internship & Entry-Level Roles',
-  summaryText: `Fourth year Data Science undergraduate with hands-on experience across the full ML lifecycle, data cleaning, feature engineering, model development, and evaluation spanning healthcare classification, graph neural networks, and time series forecasting. Proficient in Python, SQL, and the Scikit-learn/PyTorch ecosystem, with practical MLOps exposure (experiment tracking, reproducible pipelines) and applied deep learning coursework in CNNs, GNNs, and NLP. Currently leading the AI/data science layer of a 5-member Final Year Project building an AI-powered personal finance application. Seeking a Data Science, Machine Learning, or Data Analyst role to apply predictive modeling and explainable AI skills in an applied setting.`
+  openTo: 'Junior / Associate Data Engineer or Data Engineering Intern Roles',
+  summaryText: `Final-year Data Science undergraduate focused on building the data infrastructure behind analytics and ML products. Hands-on with end-to-end pipelines: ingestion, cleaning, validation, transformation, relational modelling in PostgreSQL/MySQL, and serving data through decoupled APIs. Curated an 11,500+ record multilingual dataset, designed a zero cost cloud data stack (PostgreSQL on Supabase/Neon, FastAPI, Hugging Face Hub), and packaged reproducible, version tracked workflows with DagsHub, Docker and GitHub Actions. Strong in Python and SQL, with an ML background that helps in building pipelines data scientists can rely on. Seeking a Junior / Associate Data Engineer or Data Engineering Intern role.`
 };
 
 export const quickFacts: QuickFact[] = [
   {
     label: 'Education',
     value: 'SLTC (BSc Hons Data Science)',
-    subtext: '2024 – 2027 • 4th Year',
+    subtext: '2024 – Present • Final Year',
     icon: 'GraduationCap'
   },
   {
     label: 'Location',
-    value: 'Ampara, Sri Lanka',
+    value: 'Padukka, Sri Lanka',
     subtext: 'Open to Remote / Relocation',
     icon: 'MapPin'
   },
@@ -50,8 +50,8 @@ export const quickFacts: QuickFact[] = [
   },
   {
     label: 'Opportunities',
-    value: 'Open to DS / ML / Analyst Roles',
-    subtext: 'Internships & Entry-level',
+    value: 'Open to Data Engineering Roles',
+    subtext: 'Junior / Associate & Internships',
     icon: 'Briefcase'
   }
 ];
