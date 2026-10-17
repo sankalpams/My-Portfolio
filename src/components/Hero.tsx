@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  MapPin, 
   GraduationCap, 
   Cpu, 
   Code2, 
@@ -69,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             
             {/* Top Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-[10px] sm:text-[11px] font-mono tracking-widest uppercase mb-4 sm:mb-6 pill-3d">
-              <span>DATA SCIENCE &amp; MACHINE LEARNING</span>
+              <span>Aspiring Data Engineer, Data Science &amp; AI/ML</span>
             </div>
 
             {/* Giant Bold Dual-Line Title */}
@@ -92,12 +91,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-xl mb-6 font-normal">
               {personalInfo.bio}
             </p>
-
-            {/* Availability Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-mono mb-8 pill-3d">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Open to Opportunities</span>
-            </div>
 
             {/* Tabular Metadata Grid (Sanket Chaudhari Style) */}
             <div className="w-full border-t border-zinc-200 dark:border-zinc-800/80 divide-y divide-zinc-200 dark:divide-zinc-900 text-xs font-mono">
@@ -136,16 +129,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 </div>
               </div>
 
-              {/* Location */}
-              <div className="py-3 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-                <div className="sm:col-span-4 text-zinc-500 dark:text-zinc-400 uppercase flex items-center gap-1.5 font-medium">
-                  <MapPin className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-                  <span>LOCATION</span>
-                </div>
-                <div className="sm:col-span-8 text-zinc-700 dark:text-zinc-300">
-                  {personalInfo.location}
-                </div>
-              </div>
 
             </div>
 
@@ -178,7 +161,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               <div className="absolute inset-0 rounded-full radar-grid opacity-60 pointer-events-none scale-150" />
 
               {/* Theme Ambient Glowing Radial Backdrop */}
-              <div className="absolute w-[320px] h-[320px] sm:w-[580px] sm:h-[580px] lg:w-[680px] lg:h-[680px] rounded-full bg-gradient-to-tr from-rose-500/30 via-pink-500/20 to-cyan-500/30 blur-3xl -z-10 animate-pulse-glow" />
+              <div 
+                className="absolute w-[320px] h-[320px] sm:w-[580px] sm:h-[580px] lg:w-[680px] lg:h-[680px] rounded-full bg-gradient-to-tr from-rose-500/30 via-pink-500/20 to-cyan-500/30 blur-2xl -z-10"
+                style={{ transform: 'translateZ(0)', willChange: 'opacity' }}
+              />
 
               {/* Prominently Enlarged Cutout Photo */}
               <div className="relative z-10 group w-full flex justify-center items-center">
@@ -186,6 +172,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   <img 
                     src="/malith_cutout.png" 
                     alt="Malith Shehan Sankalpa" 
+                    fetchPriority="high"
+                    decoding="async"
                     className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[580px] xl:w-[680px] max-w-full h-auto object-contain drop-shadow-[0_20px_45px_rgba(0,0,0,0.18)] dark:drop-shadow-[0_35px_80px_rgba(244,63,94,0.35)] sm:group-hover:scale-105 transition-all duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = '/malith_photo.jpg';
