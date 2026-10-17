@@ -60,6 +60,8 @@ export const ProjectsPage: React.FC = () => {
               <img 
                 src="/financial_ai_thumb.jpg" 
                 alt="AI Financial Coaching & Sandbox Investment Training App" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
@@ -97,6 +99,8 @@ export const ProjectsPage: React.FC = () => {
               <img 
                 src="/smartcare_thumb.png" 
                 alt="SmartCare Clinical Intake & Diagnostics" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
@@ -132,6 +136,8 @@ export const ProjectsPage: React.FC = () => {
               <img 
                 src="/ogbn_arxiv_thumb.png" 
                 alt="OGBN-Arxiv Deep Graph Intelligence Suite" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
@@ -169,6 +175,8 @@ export const ProjectsPage: React.FC = () => {
               <img 
                 src="/public_pulse_thumb.png" 
                 alt="Public Pulse Trilingual NLP Cascade Dashboard" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
@@ -206,6 +214,8 @@ export const ProjectsPage: React.FC = () => {
               <img 
                 src="/churn_mlops_thumb.jpg" 
                 alt="End-to-End Customer Churn MLOps Pipeline" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
@@ -243,6 +253,8 @@ export const ProjectsPage: React.FC = () => {
               <img 
                 src="/portfolio_showcase_thumb.jpg" 
                 alt="My Portfolio Web Showcase" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
@@ -280,6 +292,8 @@ export const ProjectsPage: React.FC = () => {
               <img 
                 src="/sapro_greenhouse_thumb.jpg" 
                 alt="SAPRO v1.0 Smart Greenhouse Management System" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
@@ -316,6 +330,8 @@ export const ProjectsPage: React.FC = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-top group-hover/thumb:scale-105 transition-transform duration-500" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
