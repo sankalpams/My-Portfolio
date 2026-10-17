@@ -65,6 +65,8 @@ export const ProjectDetailsPage: React.FC = () => {
               <img 
                 src="/financial_ai_thumb.jpg" 
                 alt="AI-Based Personalized Financial Coaching & Sandbox Investment Training App" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
               />
             </div>
@@ -116,6 +118,8 @@ export const ProjectDetailsPage: React.FC = () => {
               <img 
                 src="/smartcare_thumb.png" 
                 alt="SmartCare Clinical Intake & Diagnostics" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
               />
             </div>
@@ -167,6 +171,8 @@ export const ProjectDetailsPage: React.FC = () => {
               <img 
                 src="/ogbn_arxiv_thumb.png" 
                 alt="OGBN-Arxiv Deep Graph Intelligence Suite" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
               />
             </div>
@@ -223,6 +229,8 @@ export const ProjectDetailsPage: React.FC = () => {
               <img 
                 src="/public_pulse_thumb.png" 
                 alt="Public Pulse Sri Lankan Civic Intelligence NLP Platform" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
               />
             </div>
@@ -274,6 +282,8 @@ export const ProjectDetailsPage: React.FC = () => {
               <img 
                 src="/churn_mlops_thumb.jpg" 
                 alt="End-to-End Customer Churn Prediction with MLOps Pipeline" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
               />
             </div>
@@ -325,6 +335,8 @@ export const ProjectDetailsPage: React.FC = () => {
               <img 
                 src="/portfolio_showcase_thumb.jpg" 
                 alt="My Portfolio Web Showcase" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
               />
             </div>
@@ -376,6 +388,8 @@ export const ProjectDetailsPage: React.FC = () => {
               <img 
                 src="/sapro_greenhouse_thumb.jpg" 
                 alt="SAPRO v1.0 Smart Greenhouse Management System" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto max-h-[360px] object-cover object-top group-hover:scale-[1.01] transition-transform duration-500" 
               />
             </div>
