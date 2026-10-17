@@ -3,11 +3,13 @@ import type { SkillCategory, Certification, EducationItem, QuickFact } from '../
 export const personalInfo = {
   name: 'Malith Shehan Sankalpa',
   preferredName: 'Malith Shehan',
-  tagline: 'Data Science Undergraduate | Machine Learning & Analytics',
+  tagline: 'Aspiring Data Engineer | Data Science & AI/ML | MLOps & Data Infrastructure',
   roles: [
-    'Aspiring Machine Learning & Deep Learning Student',
-    'Data Science Undergraduate',
-    'MLOps & Analytics Enthusiast'
+    'Aspiring Data Engineer',
+    'Data Science & AI/ML',
+    'ETL Pipelines, Data Modeling, GNNs, XGBoost, BERT',
+    'Python, SQL, PyTorch',
+    'MLOps & Data Infrastructure',
   ],
   bio: 'Data Science undergraduate with a strong interest in AI/ML, deep learning, and analytics. I enjoy turning data into practical, explainable solutions — from predictive models to intelligent, data-driven systems.',
   university: 'Sri Lanka Technology Campus (SLTC)',

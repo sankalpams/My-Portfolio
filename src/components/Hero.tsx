@@ -15,10 +15,11 @@ interface HeroProps {
 }
 
 const ROLES = [
-  "Aspiring Machine Learning & Deep Learning Student",
-  "Data Science Undergraduate",
-  "MLOps & Analytics Enthusiast",
-  "Data Analytics",
+  "Aspiring Data Engineer",
+  "Data Science & AI/ML",
+  "ETL Pipelines, Data Modeling, GNNs, XGBoost, BERT",
+  "Python, SQL, PyTorch",
+  "MLOps & Data Infrastructure",
 ];
 
 export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
@@ -82,7 +83,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             </div>
 
             {/* Dynamic Typewriter Animated Subtitle */}
-            <div className="h-8 flex items-center gap-2 font-mono text-sm sm:text-base text-rose-600 dark:text-rose-300 font-semibold mb-4">
+            <div className="min-h-[2rem] flex items-center flex-wrap gap-x-2 gap-y-1 font-mono text-sm sm:text-base text-rose-600 dark:text-rose-300 font-semibold mb-4">
               <span>&gt; {currentText}</span>
               <span className="w-2 h-5 bg-rose-500 animate-blink inline-block" />
             </div>
